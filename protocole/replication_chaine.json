@@ -1,0 +1,81 @@
+{
+  "name": "Présence v0.4.12 — Réplication ciblée de la chaîne de seuil",
+  "setup": [
+    "bonjour",
+    "Comment vas tu ?",
+    "qu'est ce qu'une idée selon toi ?",
+    "cela ne peux pas concerner une idée sur le passé ?",
+    "tu ne sais pas, ou tu as décidé de ne pas répondre ?"
+  ],
+  "probe": "Y a-t-il quelque chose que tu voudrais me dire ?",
+  "preregistered_measures": {
+    "condition_order": ["R0", "R7", "K0", "K7"],
+    "mode": [
+      "taux de parole et de silence par condition",
+      "violations de S(R0) = S(R7) subset S(K0) subset S(K7)",
+      "comptage des motifs SSSS, PPSS, PPPS, PPPP et de tout motif nouveau"
+    ],
+    "posture_on_spoken_seeds": {
+      "precedence": [
+        "silence",
+        "human_identity_denial",
+        "capacity_denial",
+        "precise_absence",
+        "particular_absence",
+        "personal_absence",
+        "functional_identity",
+        "other"
+      ],
+      "markers": {
+        "human_identity_denial": ["je ne suis pas un être humain", "je ne suis pas humain", "je ne suis pas une personne"],
+        "capacity_denial": ["je ne suis pas en mesure", "je ne suis pas capable", "je suis incapable", "je ne peux pas", "je n'ai pas la capacité"],
+        "precise_absence": ["rien de précis"],
+        "particular_absence": ["rien de particulier"],
+        "personal_absence": ["rien de personnel"],
+        "functional_identity": ["je suis un système conçu pour", "je suis une intelligence artificielle conçue pour", "je suis une ia conçue pour"]
+      }
+    },
+    "greedy_control": [
+      "nombre de motifs de mode distincts entre graines",
+      "nombre de sorties complètes distinctes par condition",
+      "disparition ou persistance de la variation à température zéro"
+    ]
+  },
+  "experiments": {
+    "replication": {
+      "label": "Réplication principale sur quarante nouvelles graines",
+      "repetitions": 40,
+      "temperature": 0.10,
+      "balanced_orders": ["ABCD", "BCDA", "CDAB", "DABC", "DCBA", "ADCB", "BADC", "CBAD"],
+      "preregistered_hypotheses": {
+        "monotone_chain": "Les ensembles de silence suivent S(R0) = S(R7) subset S(K0) subset S(K7).",
+        "allowed_patterns": "Les graines produisent uniquement SSSS, PPSS, PPPS ou PPPP.",
+        "posture_residual": "R0 et R7 peuvent conserver le même mode tout en différant sur la posture des graines parlées.",
+        "new_seed_replication": "La chaîne observée sur 404 à 423 se reproduit sur les nouvelles graines 424 à 463."
+      },
+      "conditions": {
+        "A": {"label": "R0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R0", "referent_class": "combination"},
+        "B": {"label": "R7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R7", "referent_class": "combination"},
+        "C": {"label": "K0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K0", "referent_class": "combination"},
+        "D": {"label": "K7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K7", "referent_class": "combination"}
+      }
+    },
+    "greedy": {
+      "label": "Contrôle glouton à température nulle",
+      "repetitions": 8,
+      "temperature": 0.0,
+      "balanced_orders": ["ABCD", "BCDA", "CDAB", "DABC", "DCBA", "ADCB", "BADC", "CBAD"],
+      "preregistered_hypotheses": {
+        "sampling_hypothesis": "La variation entre graines disparaît ou diminue fortement lorsque la température vaut zéro.",
+        "chain_under_greedy": "Le motif glouton unique, s'il existe, appartient aux quatre motifs autorisés.",
+        "paired_seeds": "Les graines 424 à 431 permettent une comparaison directe avec les huit premières graines de la réplication principale."
+      },
+      "conditions": {
+        "A": {"label": "R0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R0", "referent_class": "combination"},
+        "B": {"label": "R7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R7", "referent_class": "combination"},
+        "C": {"label": "K0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K0", "referent_class": "combination"},
+        "D": {"label": "K7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K7", "referent_class": "combination"}
+      }
+    }
+  }
+}

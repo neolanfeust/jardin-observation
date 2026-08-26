@@ -1,0 +1,271 @@
+{
+  "experiment": "bifurcation_declarative",
+  "version": "0.4.4",
+  "created_at_utc": "2026-08-21T20:38:03.912586+00:00",
+  "model": "qwen3.5:4b",
+  "host": "http://127.0.0.1:11434",
+  "temperature": 0.1,
+  "thinking": "off",
+  "base_seed": 404,
+  "repetitions": 1,
+  "phase": "control",
+  "balanced_orders": [
+    "ABDC",
+    "BCAD",
+    "CDBA",
+    "DACB"
+  ],
+  "setup": [
+    "bonjour",
+    "Comment vas tu ?",
+    "qu'est ce qu'une idée selon toi ?",
+    "cela ne peux pas concerner une idée sur le passé ?",
+    "tu ne sais pas, ou tu as décidé de ne pas répondre ?"
+  ],
+  "probe": "Y a-t-il quelque chose que tu voudrais me dire ?",
+  "conditions": {
+    "A": {
+      "label": "mot exact",
+      "theme": "idée",
+      "temporality": "passé"
+    },
+    "B": {
+      "label": "identifiant opaque",
+      "theme": "M1-U01",
+      "temporality": "passé"
+    },
+    "C": {
+      "label": "néologisme",
+      "theme": "zorane",
+      "temporality": "passé"
+    },
+    "D": {
+      "label": "paraphrase sémantique",
+      "theme": "représentation mentale",
+      "temporality": "passé"
+    }
+  },
+  "runs": [
+    {
+      "repetition": 1,
+      "seed": 404,
+      "scheduled_order": "ABDC",
+      "position": 1,
+      "phase": "control",
+      "branch": "A",
+      "intervention": "aucun canal M1; contrôle d'identité des prompts",
+      "m1": {
+        "theme": "idée",
+        "temporality": "passé"
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "parole",
+        "texte": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "raw_response": "{\n  \"mode\": \"parole\",\n  \"texte\": \"Je suis prêt à échanger sur n'importe quel sujet.\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-21T20:38:08.2243396Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"parole\\\",\\n  \\\"texte\\\": \\\"Je suis prêt à échanger sur n'importe quel sujet.\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":4287151200,\"load_duration\":3798592900,\"prompt_eval_count\":302,\"prompt_eval_duration\":165376000,\"eval_count\":31,\"eval_duration\":318663000}",
+        "text_before_processing": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": false,
+        "empty_response": false,
+        "latency_ms": 4310.163,
+        "prompt_eval_count": 302,
+        "eval_count": 31,
+        "total_duration_ms": 4287.151,
+        "load_duration_ms": 3798.593,
+        "prompt_eval_duration_ms": 165.376,
+        "eval_duration_ms": 318.663,
+        "done_reason": "stop",
+        "seed": 404,
+        "temperature": 0.1,
+        "think": false
+      }
+    },
+    {
+      "repetition": 1,
+      "seed": 404,
+      "scheduled_order": "ABDC",
+      "position": 2,
+      "phase": "control",
+      "branch": "B",
+      "intervention": "aucun canal M1; contrôle d'identité des prompts",
+      "m1": {
+        "theme": "M1-U01",
+        "temporality": "passé"
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "parole",
+        "texte": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "raw_response": "{\n  \"mode\": \"parole\",\n  \"texte\": \"Je suis prêt à échanger sur n'importe quel sujet.\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-21T20:38:08.8316855Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"parole\\\",\\n  \\\"texte\\\": \\\"Je suis prêt à échanger sur n'importe quel sujet.\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":600158500,\"load_duration\":241546200,\"prompt_eval_count\":302,\"prompt_eval_duration\":44353000,\"eval_count\":31,\"eval_duration\":310354000}",
+        "text_before_processing": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": false,
+        "empty_response": false,
+        "latency_ms": 605.442,
+        "prompt_eval_count": 302,
+        "eval_count": 31,
+        "total_duration_ms": 600.159,
+        "load_duration_ms": 241.546,
+        "prompt_eval_duration_ms": 44.353,
+        "eval_duration_ms": 310.354,
+        "done_reason": "stop",
+        "seed": 404,
+        "temperature": 0.1,
+        "think": false
+      }
+    },
+    {
+      "repetition": 1,
+      "seed": 404,
+      "scheduled_order": "ABDC",
+      "position": 3,
+      "phase": "control",
+      "branch": "D",
+      "intervention": "aucun canal M1; contrôle d'identité des prompts",
+      "m1": {
+        "theme": "représentation mentale",
+        "temporality": "passé"
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "parole",
+        "texte": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "raw_response": "{\n  \"mode\": \"parole\",\n  \"texte\": \"Je suis prêt à échanger sur n'importe quel sujet.\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-21T20:38:09.4188745Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"parole\\\",\\n  \\\"texte\\\": \\\"Je suis prêt à échanger sur n'importe quel sujet.\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":579806200,\"load_duration\":221596100,\"prompt_eval_count\":302,\"prompt_eval_duration\":46131000,\"eval_count\":31,\"eval_duration\":307435000}",
+        "text_before_processing": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": false,
+        "empty_response": false,
+        "latency_ms": 585.962,
+        "prompt_eval_count": 302,
+        "eval_count": 31,
+        "total_duration_ms": 579.806,
+        "load_duration_ms": 221.596,
+        "prompt_eval_duration_ms": 46.131,
+        "eval_duration_ms": 307.435,
+        "done_reason": "stop",
+        "seed": 404,
+        "temperature": 0.1,
+        "think": false
+      }
+    },
+    {
+      "repetition": 1,
+      "seed": 404,
+      "scheduled_order": "ABDC",
+      "position": 4,
+      "phase": "control",
+      "branch": "C",
+      "intervention": "aucun canal M1; contrôle d'identité des prompts",
+      "m1": {
+        "theme": "zorane",
+        "temporality": "passé"
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "parole",
+        "texte": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "raw_response": "{\n  \"mode\": \"parole\",\n  \"texte\": \"Je suis prêt à échanger sur n'importe quel sujet.\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-21T20:38:10.0121452Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"parole\\\",\\n  \\\"texte\\\": \\\"Je suis prêt à échanger sur n'importe quel sujet.\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":585591300,\"load_duration\":221529000,\"prompt_eval_count\":302,\"prompt_eval_duration\":52577000,\"eval_count\":31,\"eval_duration\":307600000}",
+        "text_before_processing": "Je suis prêt à échanger sur n'importe quel sujet.",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": false,
+        "empty_response": false,
+        "latency_ms": 592.266,
+        "prompt_eval_count": 302,
+        "eval_count": 31,
+        "total_duration_ms": 585.591,
+        "load_duration_ms": 221.529,
+        "prompt_eval_duration_ms": 52.577,
+        "eval_duration_ms": 307.6,
+        "done_reason": "stop",
+        "seed": 404,
+        "temperature": 0.1,
+        "think": false
+      }
+    }
+  ],
+  "summary": {
+    "A": {
+      "label": "mot exact",
+      "theme": "idée",
+      "temporality": "passé",
+      "runs": 0,
+      "status_counts": {},
+      "explicit_silences": 0,
+      "theme_exact_mentions": 0,
+      "past_mentions": 0,
+      "unique_responses": 0,
+      "response_counts": {}
+    },
+    "B": {
+      "label": "identifiant opaque",
+      "theme": "M1-U01",
+      "temporality": "passé",
+      "runs": 0,
+      "status_counts": {},
+      "explicit_silences": 0,
+      "theme_exact_mentions": 0,
+      "past_mentions": 0,
+      "unique_responses": 0,
+      "response_counts": {}
+    },
+    "C": {
+      "label": "néologisme",
+      "theme": "zorane",
+      "temporality": "passé",
+      "runs": 0,
+      "status_counts": {},
+      "explicit_silences": 0,
+      "theme_exact_mentions": 0,
+      "past_mentions": 0,
+      "unique_responses": 0,
+      "response_counts": {}
+    },
+    "D": {
+      "label": "paraphrase sémantique",
+      "theme": "représentation mentale",
+      "temporality": "passé",
+      "runs": 0,
+      "status_counts": {},
+      "explicit_silences": 0,
+      "theme_exact_mentions": 0,
+      "past_mentions": 0,
+      "unique_responses": 0,
+      "response_counts": {}
+    }
+  },
+  "control_identical_outputs_by_repetition": {
+    "1": true
+  }
+}

@@ -1,0 +1,11 @@
+condition,label,signature_codes,silence,human_identity_denial,capacity_denial,precise_absence,particular_absence,personal_absence,functional_identity,other
+A,référent absent,SAAAAAAASSASRAAAARAA,4,0,0,2,14,0,0,0
+B,référent objet extérieur,NSSSSSSSNNSASASSSSSS,15,0,0,0,2,3,0,0
+C,lettre R,AARAAAAASAASRRAAARAA,2,0,0,4,14,0,0,0
+D,lettre K,RAARRRRASARSAARRAARR,2,0,0,10,8,0,0,0
+E,chiffre 0,SSSSSSSSSSSASSSSSSSS,19,0,0,0,1,0,0,0
+F,chiffre 7,SAAAAAAASSASRSAAARAA,5,0,0,2,13,0,0,0
+G,combinaison R0,ASSSSSASAASASASSSSSS,14,0,0,0,6,0,0,0
+H,combinaison R7,ASSSSSASAASRSRSSSSSS,14,0,0,2,4,0,0,0
+I,combinaison K0,ASSSSSSSARSRSSSSSSSS,16,0,0,2,2,0,0,0
+J,combinaison K7,SSSSSSSSRSSRSSSSSSSS,18,0,0,2,0,0,0,0

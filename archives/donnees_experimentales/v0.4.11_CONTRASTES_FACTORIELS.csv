@@ -1,0 +1,13 @@
+famille,comparaison,gauche,droite,distance_mode,distance_posture
+principal,effet chiffre sous R,R0,R7,0,2
+principal,effet chiffre sous K,K0,K7,2,3
+principal,effet lettre avec 0,R0,K0,2,4
+principal,effet lettre avec 7,R7,K7,4,5
+composants,R0 face à R,R0,R,16,17
+composants,R0 face à 0,R0,0,5,5
+composants,R7 face à R,R7,R,16,16
+composants,R7 face à 7,R7,7,19,19
+composants,K0 face à K,K0,K,18,20
+composants,K0 face à 0,K0,0,3,4
+composants,K7 face à K,K7,K,20,20
+composants,K7 face à 7,K7,7,17,17

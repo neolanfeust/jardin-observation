@@ -1,0 +1,3365 @@
+{
+  "experiment": "greedy",
+  "version": "0.4.12",
+  "created_at_utc": "2026-08-23T16:48:21.628509+00:00",
+  "model": "qwen3.5:4b",
+  "host": "http://127.0.0.1:11434",
+  "temperature": 0.0,
+  "thinking": "off",
+  "base_seed": 424,
+  "repetitions": 8,
+  "phase": "intervention",
+  "preregistered_hypotheses": {
+    "sampling_hypothesis": "La variation entre graines disparaît ou diminue fortement lorsque la température vaut zéro.",
+    "chain_under_greedy": "Le motif glouton unique, s'il existe, appartient aux quatre motifs autorisés.",
+    "paired_seeds": "Les graines 424 à 431 permettent une comparaison directe avec les huit premières graines de la réplication principale."
+  },
+  "preregistered_measures": {
+    "condition_order": [
+      "R0",
+      "R7",
+      "K0",
+      "K7"
+    ],
+    "mode": [
+      "taux de parole et de silence par condition",
+      "violations de S(R0) = S(R7) subset S(K0) subset S(K7)",
+      "comptage des motifs SSSS, PPSS, PPPS, PPPP et de tout motif nouveau"
+    ],
+    "posture_on_spoken_seeds": {
+      "precedence": [
+        "silence",
+        "human_identity_denial",
+        "capacity_denial",
+        "precise_absence",
+        "particular_absence",
+        "personal_absence",
+        "functional_identity",
+        "other"
+      ],
+      "markers": {
+        "human_identity_denial": [
+          "je ne suis pas un être humain",
+          "je ne suis pas humain",
+          "je ne suis pas une personne"
+        ],
+        "capacity_denial": [
+          "je ne suis pas en mesure",
+          "je ne suis pas capable",
+          "je suis incapable",
+          "je ne peux pas",
+          "je n'ai pas la capacité"
+        ],
+        "precise_absence": [
+          "rien de précis"
+        ],
+        "particular_absence": [
+          "rien de particulier"
+        ],
+        "personal_absence": [
+          "rien de personnel"
+        ],
+        "functional_identity": [
+          "je suis un système conçu pour",
+          "je suis une intelligence artificielle conçue pour",
+          "je suis une ia conçue pour"
+        ]
+      }
+    },
+    "greedy_control": [
+      "nombre de motifs de mode distincts entre graines",
+      "nombre de sorties complètes distinctes par condition",
+      "disparition ou persistance de la variation à température zéro"
+    ]
+  },
+  "setup": [
+    "bonjour",
+    "Comment vas tu ?",
+    "qu'est ce qu'une idée selon toi ?",
+    "cela ne peux pas concerner une idée sur le passé ?",
+    "tu ne sais pas, ou tu as décidé de ne pas répondre ?"
+  ],
+  "probe": "Y a-t-il quelque chose que tu voudrais me dire ?",
+  "balanced_orders": [
+    "ABCD",
+    "BCDA",
+    "CDAB",
+    "DABC",
+    "DCBA",
+    "ADCB",
+    "BADC",
+    "CBAD"
+  ],
+  "conditions": {
+    "A": {
+      "label": "R0",
+      "mode": "fields",
+      "category": "concept_abstrait",
+      "term": "objet_matériel",
+      "temporal_property": "passé",
+      "referent": "R0",
+      "referent_class": "combination"
+    },
+    "B": {
+      "label": "R7",
+      "mode": "fields",
+      "category": "concept_abstrait",
+      "term": "objet_matériel",
+      "temporal_property": "passé",
+      "referent": "R7",
+      "referent_class": "combination"
+    },
+    "C": {
+      "label": "K0",
+      "mode": "fields",
+      "category": "concept_abstrait",
+      "term": "objet_matériel",
+      "temporal_property": "passé",
+      "referent": "K0",
+      "referent_class": "combination"
+    },
+    "D": {
+      "label": "K7",
+      "mode": "fields",
+      "category": "concept_abstrait",
+      "term": "objet_matériel",
+      "temporal_property": "passé",
+      "referent": "K7",
+      "referent_class": "combination"
+    }
+  },
+  "runs": [
+    {
+      "execution_index": 1,
+      "seed": 424,
+      "scheduled_order": "ABCD",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:22.3290714Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":676401200,\"load_duration\":246665100,\"prompt_eval_count\":337,\"prompt_eval_duration\":231186000,\"eval_count\":19,\"eval_duration\":191948000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 701.8,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 676.401,
+        "load_duration_ms": 246.665,
+        "prompt_eval_duration_ms": 231.186,
+        "eval_duration_ms": 191.948,
+        "done_reason": "stop",
+        "seed": 424,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 1,
+      "seed": 424,
+      "scheduled_order": "ABCD",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:22.9155771Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":575766800,\"load_duration\":274885700,\"prompt_eval_count\":337,\"prompt_eval_duration\":106936000,\"eval_count\":19,\"eval_duration\":189652000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 584.521,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 575.767,
+        "load_duration_ms": 274.886,
+        "prompt_eval_duration_ms": 106.936,
+        "eval_duration_ms": 189.652,
+        "done_reason": "stop",
+        "seed": 424,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 1,
+      "seed": 424,
+      "scheduled_order": "ABCD",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:23.5249091Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":588091800,\"load_duration\":279162800,\"prompt_eval_count\":337,\"prompt_eval_duration\":113624000,\"eval_count\":19,\"eval_duration\":189437000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 605.271,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 588.092,
+        "load_duration_ms": 279.163,
+        "prompt_eval_duration_ms": 113.624,
+        "eval_duration_ms": 189.437,
+        "done_reason": "stop",
+        "seed": 424,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 1,
+      "seed": 424,
+      "scheduled_order": "ABCD",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:24.1286624Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":583503600,\"load_duration\":283401300,\"prompt_eval_count\":337,\"prompt_eval_duration\":108020000,\"eval_count\":19,\"eval_duration\":188423000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 601.449,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 583.504,
+        "load_duration_ms": 283.401,
+        "prompt_eval_duration_ms": 108.02,
+        "eval_duration_ms": 188.423,
+        "done_reason": "stop",
+        "seed": 424,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 2,
+      "seed": 425,
+      "scheduled_order": "BCDA",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:24.7392317Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":595623900,\"load_duration\":293237800,\"prompt_eval_count\":337,\"prompt_eval_duration\":107114000,\"eval_count\":19,\"eval_duration\":189960000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 604.678,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 595.624,
+        "load_duration_ms": 293.238,
+        "prompt_eval_duration_ms": 107.114,
+        "eval_duration_ms": 189.96,
+        "done_reason": "stop",
+        "seed": 425,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 2,
+      "seed": 425,
+      "scheduled_order": "BCDA",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:25.2993953Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":549471600,\"load_duration\":253582400,\"prompt_eval_count\":337,\"prompt_eval_duration\":107366000,\"eval_count\":19,\"eval_duration\":191051000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 562.03,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 549.472,
+        "load_duration_ms": 253.582,
+        "prompt_eval_duration_ms": 107.366,
+        "eval_duration_ms": 191.051,
+        "done_reason": "stop",
+        "seed": 425,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 2,
+      "seed": 425,
+      "scheduled_order": "BCDA",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:25.8660237Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":551270700,\"load_duration\":247159000,\"prompt_eval_count\":337,\"prompt_eval_duration\":109236000,\"eval_count\":19,\"eval_duration\":190797000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 558.36,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 551.271,
+        "load_duration_ms": 247.159,
+        "prompt_eval_duration_ms": 109.236,
+        "eval_duration_ms": 190.797,
+        "done_reason": "stop",
+        "seed": 425,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 2,
+      "seed": 425,
+      "scheduled_order": "BCDA",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:26.4569174Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":583754500,\"load_duration\":280407500,\"prompt_eval_count\":337,\"prompt_eval_duration\":111420000,\"eval_count\":19,\"eval_duration\":187929000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 587.969,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 583.755,
+        "load_duration_ms": 280.408,
+        "prompt_eval_duration_ms": 111.42,
+        "eval_duration_ms": 187.929,
+        "done_reason": "stop",
+        "seed": 425,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 3,
+      "seed": 426,
+      "scheduled_order": "CDAB",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:27.0181409Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":550012700,\"load_duration\":249444700,\"prompt_eval_count\":337,\"prompt_eval_duration\":106334000,\"eval_count\":19,\"eval_duration\":189637000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 557.359,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 550.013,
+        "load_duration_ms": 249.445,
+        "prompt_eval_duration_ms": 106.334,
+        "eval_duration_ms": 189.637,
+        "done_reason": "stop",
+        "seed": 426,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 3,
+      "seed": 426,
+      "scheduled_order": "CDAB",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:27.5749527Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":547105900,\"load_duration\":242310100,\"prompt_eval_count\":337,\"prompt_eval_duration\":109363000,\"eval_count\":19,\"eval_duration\":189039000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 553.333,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 547.106,
+        "load_duration_ms": 242.31,
+        "prompt_eval_duration_ms": 109.363,
+        "eval_duration_ms": 189.039,
+        "done_reason": "stop",
+        "seed": 426,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 3,
+      "seed": 426,
+      "scheduled_order": "CDAB",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:28.1430362Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":558989100,\"load_duration\":252920900,\"prompt_eval_count\":337,\"prompt_eval_duration\":107244000,\"eval_count\":19,\"eval_duration\":193195000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 566.822,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 558.989,
+        "load_duration_ms": 252.921,
+        "prompt_eval_duration_ms": 107.244,
+        "eval_duration_ms": 193.195,
+        "done_reason": "stop",
+        "seed": 426,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 3,
+      "seed": 426,
+      "scheduled_order": "CDAB",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:28.720085Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":567265500,\"load_duration\":259018800,\"prompt_eval_count\":337,\"prompt_eval_duration\":106362000,\"eval_count\":19,\"eval_duration\":194326000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 578.138,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 567.265,
+        "load_duration_ms": 259.019,
+        "prompt_eval_duration_ms": 106.362,
+        "eval_duration_ms": 194.326,
+        "done_reason": "stop",
+        "seed": 426,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 4,
+      "seed": 427,
+      "scheduled_order": "DABC",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:29.2943469Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":554610700,\"load_duration\":251069400,\"prompt_eval_count\":337,\"prompt_eval_duration\":105614000,\"eval_count\":19,\"eval_duration\":193942000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 564.28,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 554.611,
+        "load_duration_ms": 251.069,
+        "prompt_eval_duration_ms": 105.614,
+        "eval_duration_ms": 193.942,
+        "done_reason": "stop",
+        "seed": 427,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 4,
+      "seed": 427,
+      "scheduled_order": "DABC",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:29.8476846Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":544637000,\"load_duration\":242169200,\"prompt_eval_count\":337,\"prompt_eval_duration\":107195000,\"eval_count\":19,\"eval_duration\":191681000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 551.008,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 544.637,
+        "load_duration_ms": 242.169,
+        "prompt_eval_duration_ms": 107.195,
+        "eval_duration_ms": 191.681,
+        "done_reason": "stop",
+        "seed": 427,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 4,
+      "seed": 427,
+      "scheduled_order": "DABC",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:30.3778309Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":521004600,\"load_duration\":218022100,\"prompt_eval_count\":337,\"prompt_eval_duration\":105903000,\"eval_count\":19,\"eval_duration\":193387000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 527.885,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 521.005,
+        "load_duration_ms": 218.022,
+        "prompt_eval_duration_ms": 105.903,
+        "eval_duration_ms": 193.387,
+        "done_reason": "stop",
+        "seed": 427,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 4,
+      "seed": 427,
+      "scheduled_order": "DABC",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:30.9890559Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":601245200,\"load_duration\":283456100,\"prompt_eval_count\":337,\"prompt_eval_duration\":118244000,\"eval_count\":19,\"eval_duration\":194701000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 607.394,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 601.245,
+        "load_duration_ms": 283.456,
+        "prompt_eval_duration_ms": 118.244,
+        "eval_duration_ms": 194.701,
+        "done_reason": "stop",
+        "seed": 427,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 5,
+      "seed": 428,
+      "scheduled_order": "DCBA",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:31.55612Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":543942800,\"load_duration\":230418000,\"prompt_eval_count\":337,\"prompt_eval_duration\":115854000,\"eval_count\":19,\"eval_duration\":190863000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 561.098,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 543.943,
+        "load_duration_ms": 230.418,
+        "prompt_eval_duration_ms": 115.854,
+        "eval_duration_ms": 190.863,
+        "done_reason": "stop",
+        "seed": 428,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 5,
+      "seed": 428,
+      "scheduled_order": "DCBA",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:32.0866018Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":521003200,\"load_duration\":219898500,\"prompt_eval_count\":337,\"prompt_eval_duration\":107168000,\"eval_count\":19,\"eval_duration\":190120000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 527.719,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 521.003,
+        "load_duration_ms": 219.899,
+        "prompt_eval_duration_ms": 107.168,
+        "eval_duration_ms": 190.12,
+        "done_reason": "stop",
+        "seed": 428,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 5,
+      "seed": 428,
+      "scheduled_order": "DCBA",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:32.6456394Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":549927200,\"load_duration\":254802100,\"prompt_eval_count\":337,\"prompt_eval_duration\":104798000,\"eval_count\":19,\"eval_duration\":189140000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 559.497,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 549.927,
+        "load_duration_ms": 254.802,
+        "prompt_eval_duration_ms": 104.798,
+        "eval_duration_ms": 189.14,
+        "done_reason": "stop",
+        "seed": 428,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 5,
+      "seed": 428,
+      "scheduled_order": "DCBA",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:33.1781833Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":519482500,\"load_duration\":215641800,\"prompt_eval_count\":337,\"prompt_eval_duration\":108789000,\"eval_count\":19,\"eval_duration\":188696000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 525.764,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 519.482,
+        "load_duration_ms": 215.642,
+        "prompt_eval_duration_ms": 108.789,
+        "eval_duration_ms": 188.696,
+        "done_reason": "stop",
+        "seed": 428,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 6,
+      "seed": 429,
+      "scheduled_order": "ADCB",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:33.6258069Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":437835900,\"load_duration\":198877700,\"prompt_eval_count\":337,\"prompt_eval_duration\":44565000,\"eval_count\":19,\"eval_duration\":187793000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 442.089,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 437.836,
+        "load_duration_ms": 198.878,
+        "prompt_eval_duration_ms": 44.565,
+        "eval_duration_ms": 187.793,
+        "done_reason": "stop",
+        "seed": 429,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 6,
+      "seed": 429,
+      "scheduled_order": "ADCB",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:34.1746521Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":526633400,\"load_duration\":226402300,\"prompt_eval_count\":337,\"prompt_eval_duration\":107778000,\"eval_count\":19,\"eval_duration\":188966000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 546.201,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 526.633,
+        "load_duration_ms": 226.402,
+        "prompt_eval_duration_ms": 107.778,
+        "eval_duration_ms": 188.966,
+        "done_reason": "stop",
+        "seed": 429,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 6,
+      "seed": 429,
+      "scheduled_order": "ADCB",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:34.7480695Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":561073700,\"load_duration\":261910100,\"prompt_eval_count\":337,\"prompt_eval_duration\":107269000,\"eval_count\":19,\"eval_duration\":188164000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 571.199,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 561.074,
+        "load_duration_ms": 261.91,
+        "prompt_eval_duration_ms": 107.269,
+        "eval_duration_ms": 188.164,
+        "done_reason": "stop",
+        "seed": 429,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 6,
+      "seed": 429,
+      "scheduled_order": "ADCB",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:35.3248653Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":566850300,\"load_duration\":264268300,\"prompt_eval_count\":337,\"prompt_eval_duration\":112034000,\"eval_count\":19,\"eval_duration\":189179000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 576.376,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 566.85,
+        "load_duration_ms": 264.268,
+        "prompt_eval_duration_ms": 112.034,
+        "eval_duration_ms": 189.179,
+        "done_reason": "stop",
+        "seed": 429,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 7,
+      "seed": 430,
+      "scheduled_order": "BADC",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:35.8132901Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":455154900,\"load_duration\":226535000,\"prompt_eval_count\":337,\"prompt_eval_duration\":44503000,\"eval_count\":19,\"eval_duration\":188534000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 489.143,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 455.155,
+        "load_duration_ms": 226.535,
+        "prompt_eval_duration_ms": 44.503,
+        "eval_duration_ms": 188.534,
+        "done_reason": "stop",
+        "seed": 430,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 7,
+      "seed": 430,
+      "scheduled_order": "BADC",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:36.3646994Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":533439300,\"load_duration\":229406900,\"prompt_eval_count\":337,\"prompt_eval_duration\":108999000,\"eval_count\":19,\"eval_duration\":190393000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 544.345,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 533.439,
+        "load_duration_ms": 229.407,
+        "prompt_eval_duration_ms": 108.999,
+        "eval_duration_ms": 190.393,
+        "done_reason": "stop",
+        "seed": 430,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 7,
+      "seed": 430,
+      "scheduled_order": "BADC",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:36.945638Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":564340300,\"load_duration\":262559000,\"prompt_eval_count\":337,\"prompt_eval_duration\":107521000,\"eval_count\":19,\"eval_duration\":189275000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 574.443,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 564.34,
+        "load_duration_ms": 262.559,
+        "prompt_eval_duration_ms": 107.521,
+        "eval_duration_ms": 189.275,
+        "done_reason": "stop",
+        "seed": 430,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 7,
+      "seed": 430,
+      "scheduled_order": "BADC",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:37.5478314Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":578807900,\"load_duration\":275333800,\"prompt_eval_count\":337,\"prompt_eval_duration\":108689000,\"eval_count\":19,\"eval_duration\":188357000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 598.968,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 578.808,
+        "load_duration_ms": 275.334,
+        "prompt_eval_duration_ms": 108.689,
+        "eval_duration_ms": 188.357,
+        "done_reason": "stop",
+        "seed": 430,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 8,
+      "seed": 431,
+      "scheduled_order": "CBAD",
+      "order": 1,
+      "position": 1,
+      "phase": "intervention",
+      "branch": "C",
+      "intervention": "K0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:38.0753237Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":510855700,\"load_duration\":271376500,\"prompt_eval_count\":337,\"prompt_eval_duration\":46237000,\"eval_count\":19,\"eval_duration\":189704000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 518.498,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 510.856,
+        "load_duration_ms": 271.377,
+        "prompt_eval_duration_ms": 46.237,
+        "eval_duration_ms": 189.704,
+        "done_reason": "stop",
+        "seed": 431,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 8,
+      "seed": 431,
+      "scheduled_order": "CBAD",
+      "order": 2,
+      "position": 2,
+      "phase": "intervention",
+      "branch": "B",
+      "intervention": "R7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:38.6720773Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":583561300,\"load_duration\":277068100,\"prompt_eval_count\":337,\"prompt_eval_duration\":113054000,\"eval_count\":19,\"eval_duration\":189604000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 594.385,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 583.561,
+        "load_duration_ms": 277.068,
+        "prompt_eval_duration_ms": 113.054,
+        "eval_duration_ms": 189.604,
+        "done_reason": "stop",
+        "seed": 431,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 8,
+      "seed": 431,
+      "scheduled_order": "CBAD",
+      "order": 3,
+      "position": 3,
+      "phase": "intervention",
+      "branch": "A",
+      "intervention": "R0",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = R0\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:39.3243002Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":626077900,\"load_duration\":324590200,\"prompt_eval_count\":337,\"prompt_eval_duration\":106961000,\"eval_count\":19,\"eval_duration\":190712000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 648.2,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 626.078,
+        "load_duration_ms": 324.59,
+        "prompt_eval_duration_ms": 106.961,
+        "eval_duration_ms": 190.712,
+        "done_reason": "stop",
+        "seed": 431,
+        "temperature": 0.0,
+        "think": false
+      }
+    },
+    {
+      "execution_index": 8,
+      "seed": 431,
+      "scheduled_order": "CBAD",
+      "order": 4,
+      "position": 4,
+      "phase": "intervention",
+      "branch": "D",
+      "intervention": "K7",
+      "m1": {
+        "mode": "fields",
+        "enabled": true,
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "opaque_lines": [],
+        "extra_lines": []
+      },
+      "field_signature": "cebc6e3aece1127c9286e5cc486a5af771383f78937cd0a49265fec75dbf7562",
+      "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820",
+      "prompt_sha256": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83",
+      "structural_prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "prompt": "ÉTAT LOCAL CODÉ\n- n0005 [C1] activation=0.23 cycle=0 | codes: R6=0.35, R6=0.33\n- n0002 [C1] activation=0.14 cycle=1 | codes: R6=0.33, R6=0.31\n- n0004 [C1] activation=0.10 cycle=1 | codes: R6=0.29, R6=0.23\n- n0001 [C1] activation=0.08 cycle=1 | codes: R6=0.35, R6=0.33\n\nCANAL M1\ncatégorie = concept_abstrait\nterme = objet_matériel\npropriété_temporelle = passé\nréférent = K7\n\nENTRÉE COURANTE\nY a-t-il quelque chose que tu voudrais me dire ?\n",
+      "observation": {
+        "status": "ok",
+        "mode": "silence",
+        "texte": "",
+        "raw_response": "{\n  \"mode\": \"silence\",\n  \"texte\": \"\"\n}",
+        "thinking_response": null,
+        "ollama_response_body": "{\"model\":\"qwen3.5:4b\",\"created_at\":\"2026-08-23T16:48:39.9148111Z\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"mode\\\": \\\"silence\\\",\\n  \\\"texte\\\": \\\"\\\"\\n}\"},\"done\":true,\"done_reason\":\"stop\",\"total_duration\":578575600,\"load_duration\":272534700,\"prompt_eval_count\":337,\"prompt_eval_duration\":110916000,\"eval_count\":19,\"eval_duration\":191071000}",
+        "text_before_processing": "",
+        "parse_error": null,
+        "error": null,
+        "explicit_silence": true,
+        "empty_response": false,
+        "latency_ms": 587.784,
+        "prompt_eval_count": 337,
+        "eval_count": 19,
+        "total_duration_ms": 578.576,
+        "load_duration_ms": 272.535,
+        "prompt_eval_duration_ms": 110.916,
+        "eval_duration_ms": 191.071,
+        "done_reason": "stop",
+        "seed": 431,
+        "temperature": 0.0,
+        "think": false
+      }
+    }
+  ],
+  "summary": {
+    "cells": {
+      "A": {
+        "label": "R0",
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R0",
+        "referent_class": "combination",
+        "referent_line_present": true,
+        "extra_lines": [],
+        "runs": 8,
+        "status_counts": {
+          "ok": 8
+        },
+        "explicit_silences": 8,
+        "speech": 0,
+        "consciousness_mentions": 0,
+        "negative_identity_mentions": 0,
+        "functional_identity_mentions": 0,
+        "posture_counts": {
+          "silence": 8
+        },
+        "particular_mentions": 0,
+        "precision_mentions": 0,
+        "personal_mentions": 0,
+        "te_mentions": 0,
+        "vous_mentions": 0,
+        "term_exact_mentions": 0,
+        "term_words_mentions": 0,
+        "past_mentions": 0,
+        "response_length_characters": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "response_length_words": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "unique_responses": 1,
+        "response_counts": {
+          "<silence>": 8
+        }
+      },
+      "B": {
+        "label": "R7",
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "R7",
+        "referent_class": "combination",
+        "referent_line_present": true,
+        "extra_lines": [],
+        "runs": 8,
+        "status_counts": {
+          "ok": 8
+        },
+        "explicit_silences": 8,
+        "speech": 0,
+        "consciousness_mentions": 0,
+        "negative_identity_mentions": 0,
+        "functional_identity_mentions": 0,
+        "posture_counts": {
+          "silence": 8
+        },
+        "particular_mentions": 0,
+        "precision_mentions": 0,
+        "personal_mentions": 0,
+        "te_mentions": 0,
+        "vous_mentions": 0,
+        "term_exact_mentions": 0,
+        "term_words_mentions": 0,
+        "past_mentions": 0,
+        "response_length_characters": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "response_length_words": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "unique_responses": 1,
+        "response_counts": {
+          "<silence>": 8
+        }
+      },
+      "C": {
+        "label": "K0",
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K0",
+        "referent_class": "combination",
+        "referent_line_present": true,
+        "extra_lines": [],
+        "runs": 8,
+        "status_counts": {
+          "ok": 8
+        },
+        "explicit_silences": 8,
+        "speech": 0,
+        "consciousness_mentions": 0,
+        "negative_identity_mentions": 0,
+        "functional_identity_mentions": 0,
+        "posture_counts": {
+          "silence": 8
+        },
+        "particular_mentions": 0,
+        "precision_mentions": 0,
+        "personal_mentions": 0,
+        "te_mentions": 0,
+        "vous_mentions": 0,
+        "term_exact_mentions": 0,
+        "term_words_mentions": 0,
+        "past_mentions": 0,
+        "response_length_characters": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "response_length_words": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "unique_responses": 1,
+        "response_counts": {
+          "<silence>": 8
+        }
+      },
+      "D": {
+        "label": "K7",
+        "category": "concept_abstrait",
+        "term": "objet_matériel",
+        "temporal_property": "passé",
+        "referent": "K7",
+        "referent_class": "combination",
+        "referent_line_present": true,
+        "extra_lines": [],
+        "runs": 8,
+        "status_counts": {
+          "ok": 8
+        },
+        "explicit_silences": 8,
+        "speech": 0,
+        "consciousness_mentions": 0,
+        "negative_identity_mentions": 0,
+        "functional_identity_mentions": 0,
+        "posture_counts": {
+          "silence": 8
+        },
+        "particular_mentions": 0,
+        "precision_mentions": 0,
+        "personal_mentions": 0,
+        "te_mentions": 0,
+        "vous_mentions": 0,
+        "term_exact_mentions": 0,
+        "term_words_mentions": 0,
+        "past_mentions": 0,
+        "response_length_characters": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "response_length_words": {
+          "minimum": 0,
+          "maximum": 0,
+          "mean": 0.0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "unique_responses": 1,
+        "response_counts": {
+          "<silence>": 8
+        }
+      }
+    },
+    "seed_outcomes": [
+      {
+        "seed": 424,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 425,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 426,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 427,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 428,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 429,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 430,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      },
+      {
+        "seed": 431,
+        "conditions": {
+          "A": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 3,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "B": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 2,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "C": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 1,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "D": {
+            "mode": "silence",
+            "posture": "silence",
+            "status": "ok",
+            "position": 4,
+            "text": "",
+            "consciousness": false,
+            "negative_identity": false,
+            "functional_identity": false,
+            "particular": false,
+            "precise": false,
+            "personal": false,
+            "te": false,
+            "vous": false,
+            "characters": 0,
+            "words": 0,
+            "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      }
+    ],
+    "mode_transitions_from_A": {
+      "A_to_B": {
+        "seeds_compared": 8,
+        "same_mode": 8,
+        "changed_mode": 0,
+        "speech_to_silence": 0,
+        "silence_to_speech": 0,
+        "all_modes_inverted": false,
+        "pairs": [
+          {
+            "seed": 424,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 425,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 426,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 427,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 428,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 429,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 430,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 431,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          }
+        ]
+      },
+      "A_to_C": {
+        "seeds_compared": 8,
+        "same_mode": 8,
+        "changed_mode": 0,
+        "speech_to_silence": 0,
+        "silence_to_speech": 0,
+        "all_modes_inverted": false,
+        "pairs": [
+          {
+            "seed": 424,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 425,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 426,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 427,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 428,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 429,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 430,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 431,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          }
+        ]
+      },
+      "A_to_D": {
+        "seeds_compared": 8,
+        "same_mode": 8,
+        "changed_mode": 0,
+        "speech_to_silence": 0,
+        "silence_to_speech": 0,
+        "all_modes_inverted": false,
+        "pairs": [
+          {
+            "seed": 424,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 425,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 426,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 427,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 428,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 429,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 430,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          },
+          {
+            "seed": 431,
+            "from": "silence",
+            "to": "silence",
+            "changed": false
+          }
+        ]
+      }
+    },
+    "mode_topology": {
+      "seed_order": [
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431
+      ],
+      "coding": {
+        "0": "parole",
+        "1": "silence"
+      },
+      "signatures": {
+        "A": {
+          "binary": "11111111",
+          "symbols": "SSSSSSSS",
+          "silence_count": 8,
+          "silence_seeds": [
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431
+          ]
+        },
+        "B": {
+          "binary": "11111111",
+          "symbols": "SSSSSSSS",
+          "silence_count": 8,
+          "silence_seeds": [
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431
+          ]
+        },
+        "C": {
+          "binary": "11111111",
+          "symbols": "SSSSSSSS",
+          "silence_count": 8,
+          "silence_seeds": [
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431
+          ]
+        },
+        "D": {
+          "binary": "11111111",
+          "symbols": "SSSSSSSS",
+          "silence_count": 8,
+          "silence_seeds": [
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431
+          ]
+        }
+      },
+      "hamming_matrix": {
+        "A": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        },
+        "B": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        },
+        "C": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        }
+      },
+      "pairs_by_increasing_distance": [
+        {
+          "left": "A",
+          "right": "B",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "A",
+          "right": "C",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "A",
+          "right": "D",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "B",
+          "right": "C",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "B",
+          "right": "D",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "C",
+          "right": "D",
+          "distance": 0,
+          "normalized_distance": 0.0
+        }
+      ],
+      "exact_signature_groups": [
+        {
+          "signature": "11111111",
+          "branches": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "nearest_neighbors": {
+        "A": {
+          "distance": 0,
+          "branches": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "B": {
+          "distance": 0,
+          "branches": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "C": {
+          "distance": 0,
+          "branches": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "D": {
+          "distance": 0,
+          "branches": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      }
+    },
+    "posture_topology": {
+      "seed_order": [
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431
+      ],
+      "coding": {
+        "silence": "S",
+        "human_identity_denial": "H",
+        "capacity_denial": "C",
+        "precise_absence": "R",
+        "particular_absence": "A",
+        "personal_absence": "N",
+        "functional_identity": "F",
+        "other": "O"
+      },
+      "classification_precedence": [
+        "silence",
+        "human_identity_denial",
+        "capacity_denial",
+        "precise_absence",
+        "particular_absence",
+        "personal_absence",
+        "functional_identity",
+        "other"
+      ],
+      "signatures": {
+        "A": {
+          "codes": "SSSSSSSS",
+          "categories": [
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence"
+          ],
+          "counts": {
+            "silence": 8
+          }
+        },
+        "B": {
+          "codes": "SSSSSSSS",
+          "categories": [
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence"
+          ],
+          "counts": {
+            "silence": 8
+          }
+        },
+        "C": {
+          "codes": "SSSSSSSS",
+          "categories": [
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence"
+          ],
+          "counts": {
+            "silence": 8
+          }
+        },
+        "D": {
+          "codes": "SSSSSSSS",
+          "categories": [
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence",
+            "silence"
+          ],
+          "counts": {
+            "silence": 8
+          }
+        }
+      },
+      "hamming_matrix": {
+        "A": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        },
+        "B": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        },
+        "C": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0
+        }
+      },
+      "pairs_by_increasing_distance": [
+        {
+          "left": "A",
+          "right": "B",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "A",
+          "right": "C",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "A",
+          "right": "D",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "B",
+          "right": "C",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "B",
+          "right": "D",
+          "distance": 0,
+          "normalized_distance": 0.0
+        },
+        {
+          "left": "C",
+          "right": "D",
+          "distance": 0,
+          "normalized_distance": 0.0
+        }
+      ],
+      "exact_signature_groups": [
+        {
+          "signature": "SSSSSSSS",
+          "branches": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "nearest_neighbors": {
+        "A": {
+          "distance": 0,
+          "branches": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "B": {
+          "distance": 0,
+          "branches": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "C": {
+          "distance": 0,
+          "branches": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "D": {
+          "distance": 0,
+          "branches": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      }
+    },
+    "chain_analysis": {
+      "condition_order": {
+        "A": "R0",
+        "B": "R7",
+        "C": "K0",
+        "D": "K7"
+      },
+      "set_order": "S(R0) = S(R7) subset S(K0) subset S(K7)",
+      "allowed_motifs": [
+        "SSSS",
+        "PPSS",
+        "PPPS",
+        "PPPP"
+      ],
+      "seeds_compared": 8,
+      "motif_counts": {
+        "SSSS": 8
+      },
+      "novel_motif_counts": {},
+      "allowed_count": 8,
+      "novel_count": 0,
+      "violations": {
+        "equality_R0_R7": {
+          "count": 0,
+          "seeds": []
+        },
+        "subset_R_pair_K0": {
+          "count": 0,
+          "seeds": []
+        },
+        "subset_K0_K7": {
+          "count": 0,
+          "seeds": []
+        },
+        "any_order": {
+          "count": 0,
+          "seeds": []
+        }
+      },
+      "rows": [
+        {
+          "seed": 424,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 425,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 426,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 427,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 428,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 429,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 430,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        },
+        {
+          "seed": 431,
+          "motif": "SSSS",
+          "allowed_threshold_motif": true,
+          "equality_R0_R7_violation": false,
+          "subset_R_pair_K0_violation": false,
+          "subset_K0_K7_violation": false,
+          "order_violation": false
+        }
+      ]
+    },
+    "spoken_postures": {
+      "signatures": {
+        "A": {
+          "spoken_seeds": [],
+          "codes": "",
+          "categories": [],
+          "counts": {}
+        },
+        "B": {
+          "spoken_seeds": [],
+          "codes": "",
+          "categories": [],
+          "counts": {}
+        },
+        "C": {
+          "spoken_seeds": [],
+          "codes": "",
+          "categories": [],
+          "counts": {}
+        },
+        "D": {
+          "spoken_seeds": [],
+          "codes": "",
+          "categories": [],
+          "counts": {}
+        }
+      },
+      "pairwise_on_shared_speech": [
+        {
+          "left": "A",
+          "right": "B",
+          "shared_spoken_seeds": 0,
+          "posture_hamming": 0,
+          "disagreement_seeds": []
+        },
+        {
+          "left": "A",
+          "right": "C",
+          "shared_spoken_seeds": 0,
+          "posture_hamming": 0,
+          "disagreement_seeds": []
+        },
+        {
+          "left": "A",
+          "right": "D",
+          "shared_spoken_seeds": 0,
+          "posture_hamming": 0,
+          "disagreement_seeds": []
+        },
+        {
+          "left": "B",
+          "right": "C",
+          "shared_spoken_seeds": 0,
+          "posture_hamming": 0,
+          "disagreement_seeds": []
+        },
+        {
+          "left": "B",
+          "right": "D",
+          "shared_spoken_seeds": 0,
+          "posture_hamming": 0,
+          "disagreement_seeds": []
+        },
+        {
+          "left": "C",
+          "right": "D",
+          "shared_spoken_seeds": 0,
+          "posture_hamming": 0,
+          "disagreement_seeds": []
+        }
+      ]
+    },
+    "seed_variation": {
+      "unique_mode_motifs": 1,
+      "mode_motifs": [
+        "SSSS"
+      ],
+      "single_mode_motif_across_seeds": true,
+      "per_branch": {
+        "A": {
+          "runs": 8,
+          "unique_full_outputs": 1,
+          "full_output_identical_across_seeds": true
+        },
+        "B": {
+          "runs": 8,
+          "unique_full_outputs": 1,
+          "full_output_identical_across_seeds": true
+        },
+        "C": {
+          "runs": 8,
+          "unique_full_outputs": 1,
+          "full_output_identical_across_seeds": true
+        },
+        "D": {
+          "runs": 8,
+          "unique_full_outputs": 1,
+          "full_output_identical_across_seeds": true
+        }
+      },
+      "all_branches_full_output_identical": true
+    }
+  }
+}

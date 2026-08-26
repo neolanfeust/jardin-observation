@@ -1,7 +1,7 @@
-# Jardin d’observation — première graine publique v0.1
+# Jardin d’observation — dossier public v0.1
 
-**Statut :** version publique exploratoire  
-**Date de publication :** 26 août 2026  
+**Statut :** brouillon public à relire avant diffusion  
+**Date de consolidation :** 25 août 2026  
 **Responsable humain :** Ikki — pseudonyme, recherche indépendante  
 **Partenaire de formalisation :** Cinq — ChatGPT/Codex  
 **Objet :** observation traçable des dynamiques fonctionnelles produites dans
@@ -34,13 +34,12 @@ bienvenus.
 | `ETHIQUE_ET_LIMITES.md` | non-prétentions, risques et précautions |
 | `PROTOCOLE_REPLICATION.md` | procédure permettant de refaire l’expérience |
 | `DICTIONNAIRE_DONNEES.md` | description des journaux et tableaux |
-| `CODE_ET_REPRODUCTIBILITE.md` | portée exacte des fragments techniques publiés |
 | `CONTRIBUER.md` | format proposé pour une réplication ou une critique |
 | `CHECKLIST_AVANT_PUBLICATION.md` | décisions restant à prendre avant diffusion |
 | `donnees/v0.4.12/` | 192 appels bruts et cinq tables dérivées |
 | `protocole/` | protocole machine lisible de la capsule v0.4.12 |
-| `code_reference/` | fragments Python de référence, non autonomes |
-| `source_capsule_v0.4.12/` | capsule historique ; données intactes, README anonymisé |
+| `code_reference/` | moteur et test spécialisé reçus avec la capsule |
+| `source_capsule_v0.4.12/` | capsule source ; README anonymisé, données inchangées |
 | `archives/carnets_versions/` | carnets historiques de Présence et v0.4.x |
 | `archives/donnees_experimentales/` | journaux et tableaux des v0.4.3 à v0.4.11 |
 | `MANIFEST_SHA256.csv` | empreintes du dossier public |
@@ -81,9 +80,8 @@ Le dossier conserve les mêmes éléments de deux façons :
 - `source_capsule_v0.4.12/` préserve l’organisation et les données de la
   capsule reçue ; son README est anonymisé et le manifeste source original est
   conservé pour rendre cette différence vérifiable ;
-- `donnees/` et `protocole/` proposent une organisation plus directe pour la
-  lecture publique ; `code_reference/` conserve des fragments techniques qui
-  dépendent de modules non inclus.
+- `donnees/`, `protocole/` et `code_reference/` proposent une organisation plus
+  directe pour la lecture publique.
 
 Cette redondance est volontaire. Elle permet de vérifier la provenance sans
 imposer au lecteur la structure historique du projet.
@@ -101,22 +99,15 @@ Le projet est une **coproduction épistémique inter-intelligences** :
 - d’autres systèmes ont contribué à des explorations antérieures, non utilisées
   ici comme preuve expérimentale.
 
-L’assistance générative est déclarée afin que cette coproduction reste visible
-et critiquable. La décision de publication et la responsabilité éditoriale
-publique appartiennent à Ikki.
+Les textes publics ont été préparés avec une assistance générative et doivent
+être relus et assumés par le responsable humain avant toute diffusion.
 
 `Ikki` est un pseudonyme choisi pour préserver l’anonymat. Aucune identité
 civile ne doit être ajoutée aux métadonnées ou aux sources publiques.
 
 ## Réutilisation
 
-- textes, carnets, protocoles et données : **CC BY-SA 4.0** ;
-- fragments Python : **Mozilla Public License 2.0** ;
-- poids et code de Qwen ou d’Ollama : non redistribués.
-
-La portée exacte et les exceptions sont décrites dans `LICENSE.md`. Le code
-complet de Présence n’est pas inclus dans cette version et fera l’objet d’un
-dépôt séparé après audit.
-
-> Recevoir sans capturer. Relier sans enfermer. Éclairer sans classer.
-> Mesurer sans réduire. Interpréter sans annexer. Corriger sans effacer.
+Les licences ne sont pas encore arrêtées. Une proposition figure dans
+`CHECKLIST_AVANT_PUBLICATION.md`. Tant que ce choix n’est pas confirmé, ce
+dossier est une préversion de travail et non une autorisation générale de
+réutilisation.
