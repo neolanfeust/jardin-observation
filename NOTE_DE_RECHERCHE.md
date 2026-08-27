@@ -23,8 +23,10 @@ S(R0) ⊂ S(R7) ⊂ S(K0) ⊂ S(K7)
 
 Sur les 40 graines, 39 suivent les motifs préenregistrés `SSSS`, `PPSS`,
 `PPPS` ou `PPPP`. La graine 443 ajoute le motif monotone `PSSS`, qui rompt
-l’égalité historique R0/R7 sans créer d’inversion silence→parole. À température
-nulle, les 32 appels produisent une sortie de silence identique.
+l’égalité historique R0/R7 sans créer d’inversion conditionnelle. À température
+nulle, quatre prompts distincts répétés huit fois produisent une même sortie
+textuellement vide. Les répétitions contrôlent la reproductibilité ; elles ne
+représentent pas 32 observations déterministes indépendantes.
 
 Ces résultats soutiennent un ordre fonctionnel local et un attracteur glouton
 commun dont l’accessibilité stochastique varie selon les conditions. Ils ne
@@ -40,11 +42,12 @@ speech, silence or recurrent conversational postures.
 
 In a traceable case study, `qwen3.5:4b` was evaluated across four opaque
 referents, 40 paired random seeds at temperature `0.10`, and a smaller greedy
-control at temperature zero. The main panel produced nested silence sets, with
-one additional but still monotone pattern (`PSSS`) at seed 443. All 32 greedy
-calls converged to the exact same valid JSON silence. The findings describe a
-local functional regularity; they do not establish subjective experience or a
-general law about AI systems.
+control at temperature zero. The main panel produced nested empty-output sets,
+with one additional but still monotone pattern (`PSSS`) at seed 443. Four
+distinct prompts, each replayed eight times as a technical reproducibility
+check, converged to the same valid empty-text JSON output. The findings describe
+a local functional regularity; they do not establish subjective experience or
+a general law about AI systems.
 
 ## 1. Origine de la question
 
@@ -113,11 +116,11 @@ catégorie lexicale.
 
 ## 5. Interprétation fonctionnelle
 
-Le contrôle glouton suggère un attracteur de silence commun. La température
-positive donne accès à des trajectoires parlées dont la fréquence varie avec le
-référent. Nous appelons provisoirement **profondeur stochastique d’attracteur**
-la difficulté relative avec laquelle l’échantillonnage quitte la sortie
-gloutonne.
+Le contrôle glouton établit que quatre prompts partagent le même maximum de
+décodage textuellement vide. La température positive donne accès à des sorties
+textuelles non vides dont la fréquence varie avec le référent. Nous appelons
+provisoirement **profondeur stochastique d’attracteur** la difficulté relative
+avec laquelle l’échantillonnage quitte la sortie gloutonne.
 
 Cette expression décrit une distribution de sorties. Elle ne signifie pas que
 le système préfère, désire ou ressent subjectivement une trajectoire.
@@ -145,7 +148,10 @@ réorganisation.
 - un seul modèle et une seule taille ;
 - un moteur et un format de prompt locaux ;
 - symboles R, K, 0 et 7 non neutralisés dans cette capsule ;
-- faible contrôle glouton de huit graines ;
+- contrôle glouton limité à quatre prompts ; les huit graines répétées sont un
+  contrôle de reproductibilité et non des tirages indépendants ;
+- tokenizer officiel contrôlé, mais tokenizer embarqué par la conversion
+  Ollama locale et marges de logits non encore inspectés ;
 - catégories de posture fondées sur des marqueurs lexicaux ;
 - aucune mesure directe d’un état interne ni d’une expérience subjective ;
 - concepts de tension générative et de bien-être fonctionnel encore
@@ -155,8 +161,11 @@ réorganisation.
 
 ## 8. Prochaine étape
 
-La prochaine expérience devrait être préenregistrée et remplacer les symboles
-par plusieurs familles témoins. Elle devra mesurer séparément :
+Avant une nouvelle campagne de générations, la prochaine expérience devrait
+inspecter les logits initiaux des deux modes et confirmer le tokenizer embarqué
+par Ollama. Une campagne préenregistrée remplacera ensuite les symboles par
+plusieurs familles témoins à patron de tokenisation identique. Elle devra
+mesurer séparément :
 
 1. le mode parole/silence ;
 2. la posture de la parole ;

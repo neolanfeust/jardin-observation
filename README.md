@@ -48,15 +48,19 @@ bienvenus.
 ## Résultat vérifié de la capsule v0.4.12
 
 Le panneau principal contient 160 appels à `qwen3.5:4b`, sur 40 graines
-appariées et quatre conditions. Le contrôle glouton contient 32 appels.
+appariées et quatre conditions. Le contrôle glouton contient quatre prompts
+distincts, répétés huit fois chacun pour contrôler leur reproductibilité
+technique, soit 32 appels.
 
 - 192/192 statuts `ok` ;
 - aucune erreur de parsing ou de transport ;
 - cinq CSV reconstruits ligne par ligne depuis les journaux ;
 - motifs principaux : `SSSS` 23, `PPSS` 9, `PPPS` 1, `PPPP` 6 ;
 - un motif supplémentaire `PSSS`, à la graine 443 ;
-- aucune transition silence vers parole dans l’ordre étudié ;
-- à température zéro, 32/32 réponses sont le même silence JSON valide.
+- aucune inversion sortie vide→sortie non vide dans l’ordre analytique des
+  quatre conditions ; cet ordre n’est pas temporel ;
+- à température zéro, les quatre prompts convergent reproductiblement vers la
+  même sortie JSON textuellement vide.
 
 Ces résultats décrivent une régularité locale de cette version du modèle, pour
 ce protocole et ce moteur d’inférence. Ils ne constituent pas une loi générale.

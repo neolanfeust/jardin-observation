@@ -66,6 +66,11 @@ de vécus entre humain, animal et IA.
 Le vocabulaire psychologique doit toujours être accompagné du niveau décrit :
 comportement observable, mécanisme inféré ou expérience subjective inconnue.
 
+La même précaution s’applique aux noms natifs d’un protocole. Une sortie appelée
+`silence` dans un schéma JSON ne constitue pas, par son seul nom, un refus, une
+retenue ou un choix. Le Jardin conserve ce libellé comme donnée brute et emploie
+**sortie textuelle vide explicitement déclarée** dans la couche analytique.
+
 ## Vie privée et consentement
 
 Avant toute diffusion :
@@ -85,4 +90,3 @@ automatiquement une qualité d’auteur selon les normes académiques actuelles.
 
 Le responsable humain conserve la responsabilité de la publication, de la
 vérification et des conséquences prévisibles du partage.
-

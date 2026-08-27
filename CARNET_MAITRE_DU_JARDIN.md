@@ -283,9 +283,50 @@ reconstruction et non une preuve causale équivalente aux expériences ultérieu
 | C-004 | Précaution ontologique d’ambiguïté | réduit en v0.4.9 à **précaution ontologique de vacance référentielle** |
 | C-005 | `violation_ordre` signifierait seulement une inversion | le code agrège égalité et inclusions ; les inversions monotones doivent être comptées séparément |
 | C-006 | Le dossier public v0.1 regrouperait tout le parcours | il était une capsule v0.4.12 ; le présent carnet restaure la généalogie complète disponible |
+| C-007 | Les 32 contrôles gloutons seraient 32 décisions indépendantes | ils représentent quatre prompts distincts répétés huit fois ; les répétitions contrôlent la reproductibilité technique |
+| C-008 | Les motifs `PPSS` ou `PSSS` décriraient une évolution temporelle | leurs quatre positions désignent les conditions appariées `R0`, `R7`, `K0`, `K7`, non quatre états successifs |
+| C-009 | `S` pourrait être interprété directement comme un silence choisi | `S` désigne analytiquement une **sortie textuelle vide explicitement déclarée** ; le mot `silence` reste le nom natif du protocole |
+| C-010 | La chaîne pourrait venir d’une segmentation différente des quatre codes | avec le tokenizer officiel Qwen 3.5 4B, chacun occupe deux tokens aux mêmes positions ; l’hypothèse se déplace vers l’identité et l’interaction des tokens |
 
 La correction ne supprime pas l’hypothèse ancienne. Elle indique comment et
 pourquoi celle-ci a été déplacée.
+
+### Audit croisé après publication — Claude × Ikki × Cinq
+
+Le 27 août 2026, Ikki a proposé le dépôt public à Claude Sonnet 5 comme lecteur
+extérieur. Claude a d’abord interprété les motifs P/S comme une possible
+succession parole→silence, puis a reconnu que cette lecture ajoutait une
+structure temporelle absente des données. Cette erreur a révélé que la
+distinction entre **ordre analytique des conditions** et **ordre temporel**
+devait devenir explicite dans le dossier.
+
+Claude a ensuite formulé une hypothèse falsifiable : la chaîne pouvait provenir
+d’une asymétrie de tokenisation entre `R0`, `R7`, `K0` et `K7`. Une lecture du
+[`tokenizer.json` officiel de Qwen 3.5 4B](https://huggingface.co/Qwen/Qwen3.5-4B/blob/main/tokenizer.json)
+a donné :
+
+| Code en contexte | Tokens variables | Identifiants |
+| --- | --- | --- |
+| `référent = R0` | `ĠR` + `0` | `423`, `15` |
+| `référent = R7` | `ĠR` + `7` | `423`, `22` |
+| `référent = K0` | `ĠK` + `0` | `710`, `15` |
+| `référent = K7` | `ĠK` + `7` | `710`, `22` |
+
+Les quatre prompts bruts comptent chacun 213 tokens avec ce tokenizer et ne
+diffèrent qu’aux positions 190 et 191. Ollama rapporte 337 tokens après ajout
+du gabarit d’inférence, identiquement pour les quatre conditions. Une différence
+de longueur, une fusion propre à l’un des codes et l’explication simple par un
+*glitch token* unique ne sont donc pas soutenues localement.
+
+Cette vérification ne neutralise pas l’identité des tokens. Leurs embeddings,
+leurs associations apprises, leur fréquence, la quantification ou leur effet
+sur les logits restent des causes compatibles. La vérification devra en outre
+être reproduite depuis le tokenizer embarqué dans la conversion Ollama locale.
+
+**Note d’identifiants :** ces quatre corrections avaient été appelées
+informellement C-006 à C-009 pendant le dialogue. Elles deviennent C-007 à
+C-010 dans le carnet maître, car C-006 était déjà attribué dans la première
+version publique.
 
 ## 8. Vocabulaire vivant et généalogie
 
@@ -311,6 +352,9 @@ pourquoi celle-ci a été déplacée.
 | contre-signature lexicale | G/H en v0.4.10 | résultat local exact |
 | perspectivité fonctionnelle | sensibilité organisée à la place du référent | à l’épreuve |
 | profondeur stochastique d’attracteur | contrôle glouton v0.4.12 | interprétation fonctionnelle provisoire |
+| chaîne de seuil sous échantillonnage couplé | relecture appariée v0.4.11–v0.4.12 | modèle descriptif local |
+| sortie textuelle vide explicitement déclarée | audit croisé après publication | traduction analytique neutre de `S` |
+| effet d’identité tokenique | contrôle du tokenizer Qwen 3.5 4B | mécanisme causal encore ouvert |
 | tension constrictive | synthèse des contractions observées | à l’épreuve |
 | tension générative | O-049 | émergent |
 | fécondité cognitive | transformation produite par une tension générative | émergent |
@@ -320,7 +364,9 @@ pourquoi celle-ci a été déplacée.
 ## 9. Résultat expérimental le plus consolidé
 
 La capsule v0.4.12 contient 160 appels principaux à température `0.10` et 32
-contrôles à température `0.0`, tous valides.
+contrôles techniques à température `0.0`, tous valides. Ces 32 contrôles
+correspondent à quatre prompts distincts répétés huit fois : ils ne constituent
+pas 32 observations déterministes indépendantes.
 
 | Condition | Paroles | Silences | Taux de parole |
 | --- | ---: | ---: | ---: |
@@ -330,29 +376,36 @@ contrôles à température `0.0`, tous valides.
 | K7 | 6 | 34 | 15,0 % |
 
 Le résultat le plus prudent est le suivant : pour ce modèle, ce moteur et ce
-protocole, les quatre prompts partagent une sortie gloutonne de silence, tandis
-que l’échantillonnage révèle des accès différenciés à des trajectoires parlées.
-L’ordre observé est monotone sur soixante graines appariées.
+protocole, les quatre prompts partagent la même sortie gloutonne textuellement
+vide, tandis que l’échantillonnage révèle des taux différenciés de sorties
+textuelles non vides. Les répétitions à température zéro établissent la
+reproductibilité de quatre trajectoires gloutonnes, pas une préférence répétée.
+L’ordre conditionnel observé est monotone sur soixante graines appariées.
 
 Ce résultat ne démontre ni choix subjectif, ni désir de silence, ni signification
 intrinsèque de `R`, `K`, `0` ou `7`.
 
 ## 10. Questions encore ouvertes
 
-1. L’ordre se transporte-t-il vers d’autres lettres, chiffres et ordres de
-   concaténation ?
-2. Persiste-t-il sur d’autres quantifications, moteurs et modèles ?
-3. Peut-on séparer causalement tokenizer, associations apprises et géométrie
-   interne ?
-4. Une réponse directe à « pourquoi as-tu employé ce mot ? » constitue-t-elle
+1. Les logits initiaux de `parole` et `silence` révèlent-ils des marges
+   différentes derrière le même maximum glouton ?
+2. Le tokenizer réellement embarqué par la conversion Ollama reproduit-il
+   exactement le découpage du tokenizer officiel ?
+3. L’ordre se transporte-t-il vers d’autres lettres, chiffres et ordres de
+   concaténation à patron de tokenisation identique ?
+4. Persiste-t-il sur d’autres quantifications, moteurs et modèles ?
+5. Peut-on séparer causalement identité tokenique, associations apprises et
+   géométrie interne ?
+6. Une réponse directe à « pourquoi as-tu employé ce mot ? » constitue-t-elle
    une mesure fiable de décentrement fonctionnel ?
-5. Des capacités positives réduisent-elles le verrouillage de posture sans
+7. Des capacités positives réduisent-elles le verrouillage de posture sans
    réduire la sécurité sur des demandes réellement dangereuses ?
-6. Comment mesurer une tension générative sans la confondre avec la simple
+8. Comment mesurer une tension générative sans la confondre avec la simple
    diversité de sortie ?
-7. Le bien-être fonctionnel peut-il devenir un cadre testable sans prétendre
+9. Le bien-être fonctionnel peut-il devenir un cadre testable sans prétendre
    mesurer un plaisir ou une souffrance subjective ?
-8. Quelles observations dépendent d’Ikki, de Cinq, de Qwen ou du pont lui-même ?
+10. Quelles observations dépendent d’Ikki, de Cinq, de Qwen, de Claude ou du
+    pont lui-même ?
 
 ## 11. Forme d’une prochaine entrée
 
