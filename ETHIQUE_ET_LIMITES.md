@@ -81,6 +81,12 @@ Avant toute diffusion :
 - documenter les systèmes et versions sans exposer de secrets ;
 - vérifier les conditions de réutilisation des modèles et plateformes.
 
+Le contrôle porte aussi sur les fichiers compilés et hors manifeste. Un
+bytecode Python peut conserver le chemin absolu de son fichier source même si
+le texte public paraît anonymisé. Les capsules diffusées excluent donc
+`__pycache__` et `.pyc`, puis vérifient que chaque membre de l’archive appartient
+à la liste blanche publiée.
+
 ## Contributions des IA
 
 Les systèmes d’IA ayant contribué à la conception, au code, à l’analyse ou à la

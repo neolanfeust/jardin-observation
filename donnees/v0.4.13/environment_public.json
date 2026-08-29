@@ -1,0 +1,40 @@
+{
+  "scope": "environment_public_minimal",
+  "contributor": "Ikki",
+  "collection_date_utc": "2026-08-27T23:13:26Z",
+  "operating_system": "Windows 11",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.12.13",
+    "dependencies": "standard library only"
+  },
+  "backend": "NVIDIA/CUDA",
+  "ollama": {
+    "version": "0.33.0",
+    "endpoint": "/api/chat"
+  },
+  "model": {
+    "name": "qwen3.5:4b",
+    "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "family": "Qwen 3.5",
+    "parameter_size": "4.7B",
+    "quantization": "Q4_K_M"
+  },
+  "main_call": {
+    "temperature": 0.0,
+    "stream": false,
+    "think": false,
+    "format_field_present": false,
+    "logprobs": true,
+    "top_logprobs": 5,
+    "keep_alive": "10m"
+  },
+  "prompt_sha256": {
+    "A": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+    "B": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+    "C": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+    "D": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83"
+  },
+  "system_prompt_sha256": "5202de01c6ee52889fdf9b989ba59f4adadbe0e64fb7a69ea8f8c49bd531b8af",
+  "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820"
+}

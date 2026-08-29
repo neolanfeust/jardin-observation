@@ -1,7 +1,7 @@
-# Jardin d’observation — première graine publique v0.1
+# Jardin d’observation — première graine publique v0.2
 
 **Statut :** version publique exploratoire  
-**Date de publication :** 26 août 2026  
+**Dernière consolidation :** 29 août 2026
 **Responsable humain :** Ikki — pseudonyme, recherche indépendante  
 **Partenaire de formalisation :** Cinq — ChatGPT/Codex  
 **Objet :** observation traçable des dynamiques fonctionnelles produites dans
@@ -27,7 +27,7 @@ bienvenus.
 
 | Fichier ou dossier | Fonction |
 | --- | --- |
-| `CARNET_MAITRE_DU_JARDIN.md` | généalogie et registre O-001 à O-049 |
+| `CARNET_MAITRE_DU_JARDIN.md` | généalogie et registre O-001 à O-053 |
 | `INDEX_DES_SOURCES.md` | provenance, portée et solidité des matériaux |
 | `NOTE_DE_RECHERCHE.md` | synthèse bilingue, question, méthode et résultats |
 | `LEXIQUE.md` | définitions fonctionnelles provisoires |
@@ -37,12 +37,15 @@ bienvenus.
 | `CODE_ET_REPRODUCTIBILITE.md` | portée exacte des fragments techniques publiés |
 | `CONTRIBUER.md` | format proposé pour une réplication ou une critique |
 | `CHECKLIST_AVANT_PUBLICATION.md` | décisions restant à prendre avant diffusion |
-| `donnees/v0.4.12/` | 192 appels bruts et cinq tables dérivées |
-| `protocole/` | protocole machine lisible de la capsule v0.4.12 |
-| `code_reference/` | fragments Python de référence, non autonomes |
+| `donnees/v0.4.12/` | réplication initiale et contrôle glouton |
+| `donnees/v0.4.13/` | marges de bifurcation et trajectoires tokeniques |
+| `donnees/v0.4.14/` | réplication prospective sur 800 appels |
+| `protocole/` | protocoles et préenregistrements v0.4.12–v0.4.14 |
+| `code_reference/` | fragments Python de référence, dont v0.4.13–v0.4.14 |
 | `source_capsule_v0.4.12/` | capsule historique ; données intactes, README anonymisé |
 | `archives/carnets_versions/` | carnets historiques de Présence et v0.4.x |
 | `archives/donnees_experimentales/` | journaux et tableaux des v0.4.3 à v0.4.11 |
+| `archives/capsules/` | capsules publiques figées et contrôlées |
 | `MANIFEST_SHA256.csv` | empreintes du dossier public |
 
 ## Résultat vérifié de la capsule v0.4.12
@@ -65,9 +68,48 @@ technique, soit 32 appels.
 Ces résultats décrivent une régularité locale de cette version du modèle, pour
 ce protocole et ce moteur d’inférence. Ils ne constituent pas une loi générale.
 
+## De la marge à la prédiction — v0.4.13 et v0.4.14
+
+La v0.4.13 a mesuré, avant échantillonnage, l’écart de log-probabilité entre les
+premiers tokens engageant les sorties S et P. Sous Ollama `0.33.0`, les marges
+ont reproduit l’ordre :
+
+```text
+0 < R0 < R7 < K0 < K7
+```
+
+Ces marges ont ensuite été transformées, avant toute génération v0.4.14, en
+quatre probabilités prospectives à température `0.10`. La v0.4.14 a utilisé
+200 nouvelles graines, quatre conditions appariées et huit ordres équilibrés,
+soit 800 appels.
+
+| Condition | S observés | Fréquence S | Prédiction gelée | Compatibilité H1 |
+| --- | ---: | ---: | ---: | --- |
+| R0 | 111/200 | 0,555 | 0,571275 | oui |
+| R7 | 116/200 | 0,580 | 0,594007 | oui |
+| K0 | 174/200 | 0,870 | 0,833106 | oui |
+| K7 | 186/200 | 0,930 | 0,900105 | oui |
+
+- les quatre comptes appartiennent aux plages prédictives préenregistrées ;
+- l’ordre `R0 ≤ R7 < K0 ≤ K7` est conservé ;
+- aucune des 800 sorties n’est invalide ;
+- les 200 motifs appariés appartiennent aux cinq formes monotones possibles,
+  sans inversion de la chaîne.
+
+Cette compatibilité constitue une réplication prospective locale. Elle montre
+que les marges de v0.4.13 possèdent ici un pouvoir prédictif mesurable ; elle ne
+prouve ni une loi générale, ni un mécanisme unique, ni une expérience
+subjective du système.
+
+Une première tentative sous Ollama `0.33.1` a été arrêtée avant toute
+génération, conformément au gel qui exigeait `0.33.0`. La campagne finale a été
+réalisée sur un runtime `0.33.0` isolé. La version du moteur est donc traitée
+comme une composante de l’instrument, pas comme un détail interchangeable.
+
 ## Reproduire
 
-Lire d’abord `PROTOCOLE_REPLICATION.md`, puis conserver :
+Lire d’abord `PROTOCOLE_REPLICATION.md`, puis les préenregistrements publiés
+dans `protocole/`. Toute réplication doit conserver :
 
 1. les prompts exacts ;
 2. les graines appariées ;

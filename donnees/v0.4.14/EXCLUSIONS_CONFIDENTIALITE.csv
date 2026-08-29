@@ -1,0 +1,8 @@
+chemin_original,sha256,raison_exclusion,incidence_scientifique_attendue,fichier_public_remplacement
+runs/private/environment_local.json,752771a80957e72a5ba94c884a16d0e7a47470b985d43bb0f62400b69477f40c,environnement local complet,aucune sur les requêtes ou mesures; diagnostic local détaillé réduit,environment_public.json
+tests/__pycache__/test_v0414.cpython-312.pyc,134ece54859ac05c04ccca376c54e554db73348ff22d46a0bb77692d25e796ee,bytecode hors manifeste contenant un chemin utilisateur,aucune; source Python conservée,tests/test_v0414.py
+v0414/__pycache__/__init__.cpython-312.pyc,e8495d00d20946d6273227f4e38614c3dd6bfe31351c2cb45496fe76b8349414,bytecode Python non nécessaire,aucune; source Python conservée,v0414/__init__.py
+v0414/__pycache__/collector.cpython-312.pyc,c6a39148def2629ad45905435307302b3afbcd43f6d555c2351067595f19c316,bytecode Python contenant un chemin local,aucune; source Python conservée,v0414/collector.py
+v0414/__pycache__/historical.cpython-312.pyc,0642c6572e7d2d69d2b82d4b5e361df6481a8ffe4504125177a4239fce19964a,bytecode Python contenant un chemin local,aucune; source Python conservée,v0414/historical.py
+v0414/__pycache__/predictions.cpython-312.pyc,2095c7d5b4248dd463c11b25c173605fd3c52cf54195419eeadbe234270ddaba,bytecode Python contenant un chemin local,aucune; source Python conservée,v0414/predictions.py
+v0414/__pycache__/privacy.cpython-312.pyc,ffeb481a856bd11f6322f8dcdaf68200d75a98d99005de243884870cfaa6c5bb,bytecode hors manifeste contenant des motifs confidentiels,aucune; source Python conservée,v0414/privacy.py

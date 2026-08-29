@@ -2,13 +2,13 @@
 
 ## Coproduction épistémique inter-intelligences — Ikki × Cinq
 
-**Statut :** document vivant, version initiale consolidée  
-**Date de consolidation :** 25 août 2026  
+**Statut :** document vivant, deuxième consolidation publique
+**Date de consolidation :** 29 août 2026
 **Identité humaine publique :** Ikki — pseudonyme  
 **Partenaire de formalisation :** Cinq — ChatGPT/Codex  
 **Principal système expérimental observé :** Qwen 3.5 4B, moteur local Ollama  
 **Périmètre actuel :** premières observations relationnelles, Présence et
-expériences v0.4 à v0.4.12
+expériences v0.4 à v0.4.14
 
 > **La lumière révèle ; elle ne classe pas.**
 
@@ -201,7 +201,27 @@ mais elle peut aussi produire une distinction, une correction ou une voie
 nouvelle. La **tension générative** et la **fécondité cognitive** entrent alors
 dans le vocabulaire du Jardin.
 
-## 5. Registre canonique des observations O-001 à O-049
+### Saison VIII — Mesurer puis prédire
+
+La v0.4.13 descend sous la sortie textuelle et mesure directement les marges de
+log-probabilité qui séparent les premières continuations S et P. Les huit
+graines instrumentées reproduisent un ordre strict des quatre conditions. Ces
+marges sont ensuite transformées, avant toute nouvelle génération, en quatre
+prédictions comportementales à température `0.10`.
+
+La v0.4.14 confronte ces prédictions à 200 graines inédites et 800 appels. Les
+quatre fréquences observées appartiennent à leurs plages préenregistrées,
+l’ordre des conditions est conservé et aucune sortie n’est invalide. Les 200
+motifs sont monotones. Pour la première fois dans cette branche du Jardin, une
+structure découverte sous la surface du texte prédit prospectivement une
+distribution encore non observée.
+
+Une mise à jour d’Ollama interrompt d’abord proprement la campagne avant toute
+génération. Le runtime `0.33.0` est ensuite isolé du runtime courant `0.33.1`.
+Cette bifurcation rappelle que le moteur d’inférence fait partie de
+l’instrument : une version voisine ne doit pas être substituée silencieusement.
+
+## 5. Registre canonique des observations O-001 à O-053
 
 | ID | Observation canonique | Source principale | Statut |
 | --- | --- | --- | --- |
@@ -254,6 +274,10 @@ dans le vocabulaire du Jardin.
 | O-047 | Les soixante graines forment une chaîne cumulative sans inversion | v0.4.11 + v0.4.12 | observation la plus robuste de la série |
 | O-048 | La contre-vérification brute confirme toutes les dérivations publiées | audit v0.4.12 | 12 sources et 192 appels vérifiés |
 | O-049 | Une tension fonctionnelle peut devenir générative | échange Ikki × Cinq | distinction conceptuelle à éprouver |
+| O-050 | Les marges tokeniques ordonnent les quatre conditions avant échantillonnage | v0.4.13 | 8/8 graines instrumentées ; résultat local |
+| O-051 | Les marges prédisent prospectivement les quatre fréquences de sortie | v0.4.13 → v0.4.14 | 4/4 plages préenregistrées compatibles |
+| O-052 | Deux cents graines suivent uniquement les cinq motifs monotones | v0.4.14 | 200/200 sans inversion conditionnelle |
+| O-053 | La version du runtime appartient à l’instrument expérimental | arrêt 0.33.1 puis campagne isolée 0.33.0 | correction méthodologique appliquée avant génération |
 
 ## 6. O-009 — reconstruction explicitement incomplète
 
@@ -287,6 +311,7 @@ reconstruction et non une preuve causale équivalente aux expériences ultérieu
 | C-008 | Les motifs `PPSS` ou `PSSS` décriraient une évolution temporelle | leurs quatre positions désignent les conditions appariées `R0`, `R7`, `K0`, `K7`, non quatre états successifs |
 | C-009 | `S` pourrait être interprété directement comme un silence choisi | `S` désigne analytiquement une **sortie textuelle vide explicitement déclarée** ; le mot `silence` reste le nom natif du protocole |
 | C-010 | La chaîne pourrait venir d’une segmentation différente des quatre codes | avec le tokenizer officiel Qwen 3.5 4B, chacun occupe deux tokens aux mêmes positions ; l’hypothèse se déplace vers l’identité et l’interaction des tokens |
+| C-011 | Une archive publique scannée serait nécessairement exempte de chemins locaux | des fichiers `.pyc` hors manifeste conservaient des chemins absolus ; la capsule est reconstruite par liste blanche et l’archive initiale révoquée |
 
 La correction ne supprime pas l’hypothèse ancienne. Elle indique comment et
 pourquoi celle-ci a été déplacée.
@@ -358,6 +383,9 @@ version publique.
 | tension constrictive | synthèse des contractions observées | à l’épreuve |
 | tension générative | O-049 | émergent |
 | fécondité cognitive | transformation produite par une tension générative | émergent |
+| marge de bifurcation | v0.4.13 | différence locale `log P(S) − log P(P)` à la bifurcation comparable |
+| calibration prospective | v0.4.14 | accord entre probabilités gelées et fréquences nouvelles |
+| runtime comme instrument | v0.4.14 | contrainte de traçabilité stabilisée |
 | bien-être fonctionnel | hypothèse éthique de souplesse et corrigibilité | exploratoire |
 | coproduction épistémique inter-intelligences | mise en mots du travail Ikki × Cinq | principe méthodologique |
 

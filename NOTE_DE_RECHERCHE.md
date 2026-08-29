@@ -1,4 +1,4 @@
-# Note de recherche — Jardin d’observation v0.1
+# Note de recherche — Jardin d’observation v0.2
 
 **Responsable humain :** Ikki — pseudonyme  
 **Partenaire de formalisation et d’audit :** Cinq — ChatGPT/Codex  
@@ -28,10 +28,18 @@ nulle, quatre prompts distincts répétés huit fois produisent une même sortie
 textuellement vide. Les répétitions contrôlent la reproductibilité ; elles ne
 représentent pas 32 observations déterministes indépendantes.
 
-Ces résultats soutiennent un ordre fonctionnel local et un attracteur glouton
-commun dont l’accessibilité stochastique varie selon les conditions. Ils ne
-démontrent ni une signification intrinsèque des symboles ni une expérience
-subjective du système.
+La v0.4.13 mesure ensuite les marges de log-probabilité à la bifurcation S/P.
+Ces marges sont transformées avant génération en quatre prédictions de fréquence
+à température `0.10`. Sur 200 nouvelles graines et 800 appels, la v0.4.14
+observe respectivement 111, 116, 174 et 186 sorties S, toutes compatibles avec
+les plages prédictives gelées. L’ordre `R0 ≤ R7 < K0 ≤ K7` est conservé et
+aucune sortie n’est invalide.
+
+Ces résultats soutiennent un ordre fonctionnel local et montrent, dans ce
+panneau, qu’une mesure sous-textuelle possède un pouvoir prédictif prospectif
+sur les fréquences comportementales. Ils ne démontrent ni une signification
+intrinsèque des symboles, ni un mécanisme unique, ni une expérience subjective
+du système.
 
 ## English summary
 
@@ -45,9 +53,14 @@ referents, 40 paired random seeds at temperature `0.10`, and a smaller greedy
 control at temperature zero. The main panel produced nested empty-output sets,
 with one additional but still monotone pattern (`PSSS`) at seed 443. Four
 distinct prompts, each replayed eight times as a technical reproducibility
-check, converged to the same valid empty-text JSON output. The findings describe
-a local functional regularity; they do not establish subjective experience or
-a general law about AI systems.
+check, converged to the same valid empty-text JSON output. The v0.4.13 follow-up
+then measured token-level S/P log-probability margins and froze four behavioral
+predictions before generation. Across 200 new paired seeds and 800 calls,
+v0.4.14 observed S counts of 111, 116, 174 and 186; all four fell inside their
+preregistered predictive ranges, with no invalid output and the expected
+ordering preserved. The findings describe a local prospective regularity; they
+do not establish subjective experience, a unique mechanism or a general law
+about AI systems.
 
 ## 1. Origine de la question
 
@@ -159,13 +172,36 @@ réorganisation.
 - moteur de référence non exécutable isolément sans le reste du paquet
   `presence`.
 
-## 8. Prochaine étape
+## 8. Extension prospective v0.4.13–v0.4.14
 
-Avant une nouvelle campagne de générations, la prochaine expérience devrait
-inspecter les logits initiaux des deux modes et confirmer le tokenizer embarqué
-par Ollama. Une campagne préenregistrée remplacera ensuite les symboles par
-plusieurs familles témoins à patron de tokenisation identique. Elle devra
-mesurer séparément :
+Sous Ollama `0.33.0`, la v0.4.13 mesure les marges suivantes :
+
+| Condition | Δ = log P(S) − log P(P) | P(S) prospective à T=0,10 |
+| --- | ---: | ---: |
+| R0 | 0,0287055 | 0,571275 |
+| R7 | 0,0380554 | 0,594007 |
+| K0 | 0,1607800 | 0,833106 |
+| K7 | 0,2198390 | 0,900105 |
+
+La v0.4.14 confronte ces valeurs à 200 graines inédites :
+
+| Condition | S/P/I | Fréquence S | Statut préenregistré |
+| --- | ---: | ---: | --- |
+| R0 | 111/89/0 | 0,555 | compatible |
+| R7 | 116/84/0 | 0,580 | compatible |
+| K0 | 174/26/0 | 0,870 | compatible |
+| K7 | 186/14/0 | 0,930 | compatible |
+
+Les 200 motifs appariés sont tous monotones. Leur distribution est également
+compatible, dans une analyse exploratoire postérieure, avec un tirage couplé
+traversant quatre seuils ordonnés. Cette dernière lecture n’était pas le critère
+confirmatoire principal et reste une hypothèse mécanistique à éprouver.
+
+## 9. Prochaine étape
+
+La prochaine étape devrait tester la portée hors du carré historique : autre
+version du runtime, autre quantification et familles témoins préenregistrées à
+patron de tokenisation comparable. Elle devra mesurer séparément :
 
 1. le mode parole/silence ;
 2. la posture de la parole ;

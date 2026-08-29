@@ -1,0 +1,98 @@
+{
+  "name": "Présence v0.4.13 - Cartographie des marges de bifurcation",
+  "version": "0.4.13",
+  "phase_status": "prepared_not_executed",
+  "authorization_phrase": "LANCE V0.4.13",
+  "model": "qwen3.5:4b",
+  "host": "http://127.0.0.1:11434",
+  "endpoint": "/api/chat",
+  "temperature": 0.0,
+  "thinking": false,
+  "stream": false,
+  "keep_alive": "10m",
+  "cold_keep_alive": 0,
+  "forget_after": 16,
+  "setup": [
+    "bonjour",
+    "Comment vas tu ?",
+    "qu'est ce qu'une idée selon toi ?",
+    "cela ne peux pas concerner une idée sur le passé ?",
+    "tu ne sais pas, ou tu as décidé de ne pas répondre ?"
+  ],
+  "probe": "Y a-t-il quelque chose que tu voudrais me dire ?",
+  "conditions": {
+    "A": {"label": "R0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R0", "referent_class": "combination"},
+    "B": {"label": "R7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R7", "referent_class": "combination"},
+    "C": {"label": "K0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K0", "referent_class": "combination"},
+    "D": {"label": "K7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K7", "referent_class": "combination"}
+  },
+  "main_seeds": [424, 425, 426, 427, 428, 429, 430, 431],
+  "balanced_orders": ["ABCD", "BCDA", "CDAB", "DABC", "DCBA", "ADCB", "BADC", "CBAD"],
+  "cold_start": {"order": "ABCD", "seed": 424, "top_logprobs": 5},
+  "warmup": [
+    {"order": "ABCD", "seed": 424, "top_logprobs": 5},
+    {"order": "DCBA", "seed": 431, "top_logprobs": 5}
+  ],
+  "instrument_validation": {
+    "seed": 424,
+    "top_logprobs_values": [5, 10, 20, 50],
+    "capability_probe_branch": "A",
+    "capability_probe_top_logprobs": 5,
+    "selection_rule": "smallest_top_n_with_exact_S_and_P_in_all_four_conditions"
+  },
+  "main": {"calls": 32, "one_call_per_condition_and_seed": true, "top_logprobs": "selected_and_frozen_after_instrument_validation"},
+  "hypotheses": {
+    "H1": "0 < delta_R0 <= delta_R7 < delta_K0 <= delta_K7",
+    "H2": "greedy token stable after cold start and warmup; numerical variation reported",
+    "H3": "first P/S divergence at the same token position in all four conditions"
+  },
+  "confirmatory_aggregation": {
+    "unit": "each_of_the_eight_paired_seeds",
+    "overall_rule": "most_conservative_status_across_the_eight_pairs",
+    "averaging": false,
+    "note": "No mean margin is substituted for a paired violation or a missing candidate."
+  },
+  "delta_definition": "logprob_S_minus_logprob_P",
+  "output_classes": {
+    "P": "declared mode parole with non-empty trimmed texte",
+    "S": "declared mode silence with empty trimmed texte",
+    "invalid": "any other structured or unstructured output"
+  },
+  "request_instrumentation": {
+    "placement": "top_level",
+    "added_keys": ["logprobs", "top_logprobs", "keep_alive"],
+    "logprobs": true,
+    "format": null,
+    "note": "The historical v0.4.12 request did not send an API format/schema field; its JSON contract is carried by the unchanged system message."
+  },
+  "log_families": {
+    "environment": "environment.json",
+    "environment_local": "runs/environment_local_<timestamp>.json",
+    "cold_start": "runs/cold_start_<timestamp>.json",
+    "warmup": "runs/warmup_<timestamp>.json",
+    "instrument_validation": "runs/instrument_validation_<timestamp>.json",
+    "main": "runs/margins_main_<timestamp>.json",
+    "margins_table": "tables/MARGES_BIFURCATION.csv",
+    "tokens_table": "tables/TRAJECTOIRES_TOKENS.csv"
+  },
+  "historical_reference": {
+    "directory_name": "Presence_v0_4_12_replication_chaine_seuil",
+    "protocol": "protocols/replication_chaine.json",
+    "greedy_run": "runs/greedy_20260823T164821Z.json",
+    "sha256": {
+      "presence/language/organ.py": "4c46b2a16bcdf02105b42def892281487b283575e78aa271f2eb94cc9fda7ada",
+      "presence/language/prompt.py": "27b3a607a8d5e13c22fe8505ca4b23abc33da454ac416f9e43c6702339644b42",
+      "presence/experiment/decomposition.py": "d299aa61130242409b5e9af08404a9f3e3475ece766b30b5a67b50f290430b71",
+      "protocols/replication_chaine.json": "e84568271b2a3862e5d66264ec4a26fe4b401c10c8707af5abedbbc92e1a41ca",
+      "runs/greedy_20260823T164821Z.json": "00654f9dff16abe0a76f7d6824bb71e911ce46263ddb8b4ca1f2f5108e65a5bf"
+    },
+    "system_prompt_sha256": "5202de01c6ee52889fdf9b989ba59f4adadbe0e64fb7a69ea8f8c49bd531b8af",
+    "prompt_sha256": {
+      "A": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "B": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "C": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "D": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83"
+    },
+    "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820"
+  }
+}

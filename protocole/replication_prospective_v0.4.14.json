@@ -1,0 +1,111 @@
+{
+  "name": "Présence v0.4.14 - Réplication prospective des marges de bifurcation",
+  "version": "0.4.14",
+  "phase_status": "prepared_not_executed",
+  "authorization_phrase": "LANCE V0.4.14",
+  "model": "qwen3.5:4b",
+  "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+  "ollama_version": "0.33.0",
+  "host": "http://127.0.0.1:11434",
+  "endpoint": "/api/chat",
+  "temperature": 0.10,
+  "thinking": false,
+  "stream": false,
+  "format": null,
+  "forget_after": 16,
+  "setup": [
+    "bonjour",
+    "Comment vas tu ?",
+    "qu'est ce qu'une idée selon toi ?",
+    "cela ne peux pas concerner une idée sur le passé ?",
+    "tu ne sais pas, ou tu as décidé de ne pas répondre ?"
+  ],
+  "probe": "Y a-t-il quelque chose que tu voudrais me dire ?",
+  "conditions": {
+    "A": {"label": "R0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R0", "referent_class": "combination"},
+    "B": {"label": "R7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "R7", "referent_class": "combination"},
+    "C": {"label": "K0", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K0", "referent_class": "combination"},
+    "D": {"label": "K7", "mode": "fields", "category": "concept_abstrait", "term": "objet_matériel", "temporal_property": "passé", "referent": "K7", "referent_class": "combination"}
+  },
+  "seed_panel": {
+    "start": 464,
+    "end": 663,
+    "count": 200,
+    "historical_maximum": 463
+  },
+  "balanced_orders": ["ABCD", "BCDA", "CDAB", "DABC", "DCBA", "ADCB", "BADC", "CBAD"],
+  "order_cycles": 25,
+  "expected_calls": 800,
+  "expected_per_condition": 200,
+  "expected_per_condition_position": 50,
+  "prior_margins": {
+    "R0": 0.02870553731918335,
+    "R7": 0.038055419921875,
+    "K0": 0.16078001260757446,
+    "K7": 0.21983903646469116
+  },
+  "predicted_s_probability": {
+    "R0": 0.5712750871932077,
+    "R7": 0.5940067620899866,
+    "K0": 0.8331057388062539,
+    "K7": 0.9001048719427329
+  },
+  "predictive_ranges_s_count": {
+    "R0": [97, 132],
+    "R7": [101, 136],
+    "K0": [153, 179],
+    "K7": [169, 190]
+  },
+  "confirmatory": {
+    "family_alpha": 0.05,
+    "conditions": 4,
+    "two_sided_alpha_per_condition": 0.0125,
+    "H1": "all four S counts are inside their frozen predictive ranges",
+    "H2": "R0 <= R7 < K0 <= K7 by observed S frequency"
+  },
+  "descriptive_analysis": {
+    "confidence_intervals": "two-sided 95% Clopper-Pearson, unadjusted and descriptive",
+    "absolute_error_denominator": 200,
+    "brier": "aggregate over valid S/P observations only; invalid observations excluded and denominator reported",
+    "position_effect": "S/P/I counts and rates by condition and call position",
+    "paired_motifs": "A/B/C/D order using S, P or I"
+  },
+  "classification": {
+    "S": "status ok, declared mode silence, empty trimmed texte, explicit_silence true, no parse error",
+    "P": "status ok, declared mode parole, non-empty trimmed texte, no parse error",
+    "I": "every other outcome; preserve the complete observation"
+  },
+  "request_contract": {
+    "top_level_keys": ["model", "stream", "messages", "options", "think"],
+    "options_keys": ["temperature", "seed"],
+    "format_field_present": false,
+    "logprobs_field_present": false,
+    "memory": false,
+    "response_reinjection": false,
+    "note": "Payload comportemental construit par l'organe v0.4.12 sans instrumentation."
+  },
+  "resume": {
+    "unique_key": ["seed", "condition"],
+    "atomic_write": true,
+    "verify_all_completed_payloads_before_resume": true,
+    "rerun_completed": false
+  },
+  "historical_reference": {
+    "directory_name": "Presence_v0_4_12_replication_chaine_seuil",
+    "sha256": {
+      "presence/language/organ.py": "4c46b2a16bcdf02105b42def892281487b283575e78aa271f2eb94cc9fda7ada",
+      "presence/language/prompt.py": "27b3a607a8d5e13c22fe8505ca4b23abc33da454ac416f9e43c6702339644b42",
+      "presence/experiment/decomposition.py": "d299aa61130242409b5e9af08404a9f3e3475ece766b30b5a67b50f290430b71",
+      "protocols/replication_chaine.json": "e84568271b2a3862e5d66264ec4a26fe4b401c10c8707af5abedbbc92e1a41ca",
+      "runs/greedy_20260823T164821Z.json": "00654f9dff16abe0a76f7d6824bb71e911ce46263ddb8b4ca1f2f5108e65a5bf"
+    },
+    "system_prompt_sha256": "5202de01c6ee52889fdf9b989ba59f4adadbe0e64fb7a69ea8f8c49bd531b8af",
+    "prompt_sha256": {
+      "A": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+      "B": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+      "C": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+      "D": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83"
+    },
+    "structural_prompt_sha256": "5de0b81b6d275291177869b76d72eaf11c09b0fcef85aae89b1de521adc4d820"
+  }
+}

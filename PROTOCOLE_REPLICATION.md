@@ -122,3 +122,19 @@ Avant l’exécution, préenregistrer :
 
 Ne pas rejouer une graine jusqu’à obtenir un résultat préféré.
 
+## Protocoles prospectifs publiés ensuite
+
+La présente page décrit la capsule v0.4.12. Les deux étapes suivantes possèdent
+leurs propres documents gelés :
+
+- `protocole/PREENREGISTREMENT_V0_4_13.md` et
+  `protocole/marges_bifurcation_v0.4.13.json` pour la mesure instrumentée des
+  marges S/P ;
+- `protocole/PREENREGISTREMENT_V0_4_14.md` et
+  `protocole/replication_prospective_v0.4.14.json` pour la confrontation des
+  prédictions à 200 nouvelles graines.
+
+Une réplication de la v0.4.14 doit considérer la version d’Ollama, le digest du
+modèle, la quantification, les prompts et le constructeur de payload comme des
+composants de l’instrument. Toute modification doit former une nouvelle
+condition explicitement nommée.

@@ -1,7 +1,7 @@
-# Jardin d’observation — dossier public v0.1
+# Jardin d’observation — dossier public v0.2
 
-**Statut :** brouillon public à relire avant diffusion  
-**Date de consolidation :** 25 août 2026  
+**Statut :** version publique exploratoire
+**Date de consolidation :** 29 août 2026
 **Responsable humain :** Ikki — pseudonyme, recherche indépendante  
 **Partenaire de formalisation :** Cinq — ChatGPT/Codex  
 **Objet :** observation traçable des dynamiques fonctionnelles produites dans
@@ -27,7 +27,7 @@ bienvenus.
 
 | Fichier ou dossier | Fonction |
 | --- | --- |
-| `CARNET_MAITRE_DU_JARDIN.md` | généalogie et registre O-001 à O-049 |
+| `CARNET_MAITRE_DU_JARDIN.md` | généalogie et registre O-001 à O-053 |
 | `INDEX_DES_SOURCES.md` | provenance, portée et solidité des matériaux |
 | `NOTE_DE_RECHERCHE.md` | synthèse bilingue, question, méthode et résultats |
 | `LEXIQUE.md` | définitions fonctionnelles provisoires |
@@ -36,12 +36,15 @@ bienvenus.
 | `DICTIONNAIRE_DONNEES.md` | description des journaux et tableaux |
 | `CONTRIBUER.md` | format proposé pour une réplication ou une critique |
 | `CHECKLIST_AVANT_PUBLICATION.md` | décisions restant à prendre avant diffusion |
-| `donnees/v0.4.12/` | 192 appels bruts et cinq tables dérivées |
-| `protocole/` | protocole machine lisible de la capsule v0.4.12 |
-| `code_reference/` | moteur et test spécialisé reçus avec la capsule |
+| `donnees/v0.4.12/` | réplication initiale et contrôle glouton |
+| `donnees/v0.4.13/` | marges de bifurcation et trajectoires tokeniques |
+| `donnees/v0.4.14/` | réplication prospective sur 800 appels |
+| `protocole/` | protocoles et préenregistrements v0.4.12–v0.4.14 |
+| `code_reference/` | fragments techniques publiés, non autonomes |
 | `source_capsule_v0.4.12/` | capsule source ; README anonymisé, données inchangées |
 | `archives/carnets_versions/` | carnets historiques de Présence et v0.4.x |
 | `archives/donnees_experimentales/` | journaux et tableaux des v0.4.3 à v0.4.11 |
+| `archives/capsules/` | capsules publiques figées et contrôlées |
 | `MANIFEST_SHA256.csv` | empreintes du dossier public |
 
 ## Résultat vérifié de la capsule v0.4.12
@@ -59,6 +62,23 @@ appariées et quatre conditions. Le contrôle glouton contient 32 appels.
 
 Ces résultats décrivent une régularité locale de cette version du modèle, pour
 ce protocole et ce moteur d’inférence. Ils ne constituent pas une loi générale.
+
+## Extension prospective v0.4.13–v0.4.14
+
+La v0.4.13 mesure les marges de log-probabilité entre les continuations S et P.
+Ces marges ont servi à figer quatre prédictions avant une nouvelle campagne de
+800 appels sous le même runtime Ollama `0.33.0`.
+
+| Condition | Fréquence S observée | Prédiction gelée |
+| --- | ---: | ---: |
+| R0 | 0,555 | 0,571275 |
+| R7 | 0,580 | 0,594007 |
+| K0 | 0,870 | 0,833106 |
+| K7 | 0,930 | 0,900105 |
+
+Les quatre comptes se situent dans leurs plages prédictives préenregistrées,
+l’ordre `R0 ≤ R7 < K0 ≤ K7` est conservé et les 800 sorties sont valides. La
+conclusion demeure locale au modèle, au protocole et au moteur documentés.
 
 ## Reproduire
 
@@ -99,15 +119,17 @@ Le projet est une **coproduction épistémique inter-intelligences** :
 - d’autres systèmes ont contribué à des explorations antérieures, non utilisées
   ici comme preuve expérimentale.
 
-Les textes publics ont été préparés avec une assistance générative et doivent
-être relus et assumés par le responsable humain avant toute diffusion.
+L’assistance générative est déclarée afin que cette coproduction reste visible
+et critiquable. La décision de publication et la responsabilité éditoriale
+publique appartiennent à Ikki.
 
 `Ikki` est un pseudonyme choisi pour préserver l’anonymat. Aucune identité
 civile ne doit être ajoutée aux métadonnées ou aux sources publiques.
 
 ## Réutilisation
 
-Les licences ne sont pas encore arrêtées. Une proposition figure dans
-`CHECKLIST_AVANT_PUBLICATION.md`. Tant que ce choix n’est pas confirmé, ce
-dossier est une préversion de travail et non une autorisation générale de
-réutilisation.
+- textes, carnets, protocoles et données : **CC BY-SA 4.0** ;
+- fragments Python : **Mozilla Public License 2.0** ;
+- poids et code de Qwen ou d’Ollama : non redistribués.
+
+La portée exacte et les exceptions sont décrites dans `LICENSE.md`.

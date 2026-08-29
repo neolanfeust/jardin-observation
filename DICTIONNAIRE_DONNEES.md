@@ -133,3 +133,38 @@ de la relation préenregistrée complète, tout en restant monotone.
 
 Les analyses futures doivent publier séparément : rupture d’égalité, rupture
 d’inclusion et inversion monotone.
+
+## Extension v0.4.13 — marges de bifurcation
+
+Les fichiers se trouvent dans `donnees/v0.4.13/`.
+
+| Fichier | Contenu |
+| --- | --- |
+| `margins_main_20260827T231326Z.json` | 32 mesures principales de log-probabilités |
+| `instrument_validation_20260827T231326Z.json` | validation de l’instrument `top_logprobs` |
+| `cold_start_20260827T231326Z.json` | contrôles après déchargement du modèle |
+| `warmup_20260827T231326Z.json` | contrôles de chauffe |
+| `MARGES_BIFURCATION.csv` | marges S/P par condition et phase |
+| `TRAJECTOIRES_TOKENS.csv` | trajectoires tokeniques exposées par Ollama |
+
+La marge principale est définie par
+`log P(token S) − log P(token P)` à la première position où les deux
+continuations sont directement comparables. Les scores sont relatifs au
+runtime exact ; ils ne reconstruisent pas toute la distribution historique.
+
+## Extension v0.4.14 — réplication prospective
+
+Les fichiers se trouvent dans `donnees/v0.4.14/`.
+
+| Fichier | Contenu |
+| --- | --- |
+| `v0414_main.json` | 800 appels, graines 464–663 et quatre conditions appariées |
+| `CALIBRATION_PROSPECTIVE.csv` | prédictions gelées, comptes observés et compatibilité H1 |
+| `EFFET_POSITION.csv` | résultats descriptifs par condition et position |
+| `MOTIFS_APPARIES.csv` | motif R0/R7/K0/K7 de chaque graine |
+| `RESULTATS_V0_4_14.json` | synthèse calculée des résultats confirmatoires et descriptifs |
+| `environment_public.json` | environnement minimal nécessaire à la lecture publique |
+
+Dans `v0414_main.json`, la clé analytique est le couple `(seed, condition)`.
+Les 800 clés sont uniques. Le champ `class` prend les valeurs `S`, `P` ou `I`
+selon les règles gelées ; les sorties brutes et les payloads sont conservés.

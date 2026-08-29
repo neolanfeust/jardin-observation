@@ -28,6 +28,8 @@ preuve : elle permet seulement de remonter à la trace disponible.
 | v0.4.10 | `CARNET_V0_4_10.md` | topologie et deux CSV | O-024 à O-031 |
 | v0.4.11 | `CARNET_V0_4_11.md` | factoriel et trois CSV | O-032 à O-040 |
 | v0.4.12 | `CARNET_V0_4_12.md` | données et protocole complets ; code partiel | O-041 à O-049 |
+| v0.4.13 | `CARNET_V0_4_13.md` | 61 mesures instrumentées, marges et trajectoires tokeniques | O-050 |
+| v0.4.14 | `CARNET_RESULTATS_V0_4_14.md` | 800 appels prospectifs, tables et capsule publique | O-051 à O-053 |
 
 Tous les carnets de version se trouvent dans `archives/carnets_versions/`. Les
 journaux v0.4.3 à v0.4.11 se trouvent dans
@@ -36,6 +38,11 @@ arborescence reçue dans `source_capsule_v0.4.12/`. Cette capsule contient les
 données et le protocole nécessaires à l’audit des résultats, mais seulement
 des fragments du paquet Python `presence` ; elle n’est pas autonome à
 l’exécution.
+
+Les résultats v0.4.13 et v0.4.14 sont organisés dans `donnees/v0.4.13/` et
+`donnees/v0.4.14/`. Leurs préenregistrements et protocoles se trouvent dans
+`protocole/`, leurs fragments techniques dans `code_reference/` et leurs
+capsules publiques figées dans `archives/capsules/`.
 
 La copie reçue de `v0.4.8_replication` s’interrompt au milieu d’une chaîne JSON.
 Elle est conservée sous l’extension `_TRONQUE.txt` afin qu’une donnée incomplète
@@ -68,3 +75,9 @@ inclus. Les chemins d’exécution présents dans les anciens README ont égalem
 README a été remplacé par `python` ; le manifeste source original permet de
 constater cette anonymisation, tandis que les journaux et tableaux restent
 inchangés.
+
+L’audit de la première capsule publique v0.4.14 a détecté des fichiers `.pyc`
+hors manifeste contenant des chemins absolus. Cette première dérivation a été
+révoquée. La capsule publiée exclut tout bytecode et est construite depuis une
+liste blanche correspondant à son manifeste ; la correction est documentée
+dans `donnees/v0.4.14/REDACTIONS_CONFIDENTIALITE.md`.

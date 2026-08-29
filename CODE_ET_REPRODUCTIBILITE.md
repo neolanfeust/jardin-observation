@@ -1,6 +1,6 @@
 # Code et reproductibilité
 
-## Ce que contient réellement la v0.1
+## Ce que contient réellement la v0.2
 
 Le dépôt publie les journaux bruts, les tableaux dérivés, le protocole machine
 lisible et deux fragments Python reçus avec la capsule v0.4.12 : un lanceur
@@ -16,6 +16,12 @@ Ces fragments importent notamment :
 Ils doivent donc être lus comme des **traces de méthode et d’analyse**, et non
 comme une distribution autonome ou immédiatement exécutable de Présence.
 
+Les dossiers `code_reference/v0.4.13/` et `code_reference/v0.4.14/` ajoutent
+les collecteurs, calculs, contrôles de confidentialité et tests employés pour
+les deux campagnes suivantes. Ils conservent néanmoins des dépendances envers
+les sources historiques v0.4.12, dont les empreintes sont gelées dans les
+protocoles.
+
 ## Ce qui peut être vérifié maintenant
 
 À partir des fichiers publiés, il est possible de :
@@ -28,6 +34,11 @@ comme une distribution autonome ou immédiatement exécutable de Présence.
 
 Il n’est pas encore possible de relancer à l’identique tout le pipeline depuis
 ce seul dépôt.
+
+Les tests publics v0.4.14 n’exposent aucun chemin local. Les sources historiques
+peuvent être indiquées par `PRESENCE_V0412_ROOT` et l’archive privée v0.4.13 par
+`PRESENCE_V0413_ROOT`. Sans ces dépendances exactes, les contrôles qui les
+requièrent doivent échouer explicitement plutôt que substituer une autre source.
 
 ## Suite prévue
 

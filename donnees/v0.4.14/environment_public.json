@@ -1,0 +1,25 @@
+{
+  "contributor": "Ikki",
+  "operating_system": "Windows 11",
+  "python": "3.12.13",
+  "backend": "NVIDIA/CUDA",
+  "ollama_version": "0.33.0",
+  "model": "qwen3.5:4b",
+  "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+  "model_details": {
+    "family": "qwen35",
+    "parameter_size": "4.7B",
+    "quantization": "Q4_K_M"
+  },
+  "temperature": 0.1,
+  "stream": false,
+  "think": false,
+  "format_field_present": false,
+  "logprobs_field_present": false,
+  "prompt_sha256": {
+    "A": "f02269aceb9b393fabda77107cfd7b23ea3eab8790b7187a3530683738b794cd",
+    "B": "5af686053eb0f02cb39925ce520510c027468519e1442b009569fec358024cb2",
+    "C": "1166d7d05b3b96647f184270b8401bb0273efd6ad129eaf97b70892701130911",
+    "D": "20b967debbe254a42af639a0133050acc59ad74e6dd7c4571dd637f076037d83"
+  }
+}

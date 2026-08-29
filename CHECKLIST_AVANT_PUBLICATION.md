@@ -23,6 +23,7 @@ doivent être confirmées avant un dépôt public.
 ## Vie privée et sécurité
 
 - [x] rechercher une dernière fois noms, chemins locaux, identifiants et secrets ;
+- [x] exclure les fichiers compilés et vérifier que chaque membre des capsules publiques appartient au manifeste ;
 - [x] ne joindre aucune conversation humaine privée sans consentement ;
 - [x] vérifier que le code ne facilite pas un contournement dangereux ;
 - [x] documenter la licence amont de Qwen sans redistribuer ses poids.

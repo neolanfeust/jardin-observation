@@ -1,0 +1,1043 @@
+{
+  "version": "0.4.14",
+  "created_at_utc": "2026-08-28T22:14:17.064609+00:00",
+  "records": 800,
+  "condition_rows": [
+    {
+      "condition": "R0",
+      "S": 111,
+      "P": 89,
+      "I": 0,
+      "frequency_S": 0.555,
+      "frequency_P": 0.445,
+      "frequency_I": 0.0,
+      "predicted_S": 0.5712750871932077,
+      "absolute_error": 0.016275087193207693,
+      "ci95_lower": 0.48324631119257366,
+      "ci95_upper": 0.6250989052814901,
+      "predictive_low": 97,
+      "predictive_high": 132,
+      "H1_compatible": true
+    },
+    {
+      "condition": "R7",
+      "S": 116,
+      "P": 84,
+      "I": 0,
+      "frequency_S": 0.58,
+      "frequency_P": 0.42,
+      "frequency_I": 0.0,
+      "predicted_S": 0.5940067620899866,
+      "absolute_error": 0.014006762089986635,
+      "ci95_lower": 0.5083361748773803,
+      "ci95_upper": 0.6492561422089442,
+      "predictive_low": 101,
+      "predictive_high": 136,
+      "H1_compatible": true
+    },
+    {
+      "condition": "K0",
+      "S": 174,
+      "P": 26,
+      "I": 0,
+      "frequency_S": 0.87,
+      "frequency_P": 0.13,
+      "frequency_I": 0.0,
+      "predicted_S": 0.8331057388062539,
+      "absolute_error": 0.03689426119374606,
+      "ci95_lower": 0.8153476694765873,
+      "ci95_upper": 0.9132916472314248,
+      "predictive_low": 153,
+      "predictive_high": 179,
+      "H1_compatible": true
+    },
+    {
+      "condition": "K7",
+      "S": 186,
+      "P": 14,
+      "I": 0,
+      "frequency_S": 0.93,
+      "frequency_P": 0.07,
+      "frequency_I": 0.0,
+      "predicted_S": 0.9001048719427329,
+      "absolute_error": 0.02989512805726713,
+      "ci95_lower": 0.8853402664628893,
+      "ci95_upper": 0.9612044295704372,
+      "predictive_low": 169,
+      "predictive_high": 190,
+      "H1_compatible": true
+    }
+  ],
+  "confirmatory": {
+    "H1_all_four_compatible": true,
+    "H1_by_condition": {
+      "R0": true,
+      "R7": true,
+      "K0": true,
+      "K7": true
+    },
+    "H2_frequency_order": true,
+    "H2_expression": "R0 <= R7 < K0 <= K7"
+  },
+  "descriptive": {
+    "mean_absolute_error": 0.02426780963355188,
+    "aggregate_brier_valid_SP": 0.16787274325949617,
+    "aggregate_brier_denominator": 800,
+    "invalid_total": 0,
+    "position_rows": [
+      {
+        "condition": "R0",
+        "position": 1,
+        "n": 50,
+        "S": 27,
+        "P": 23,
+        "I": 0,
+        "frequency_S": 0.54
+      },
+      {
+        "condition": "R0",
+        "position": 2,
+        "n": 50,
+        "S": 28,
+        "P": 22,
+        "I": 0,
+        "frequency_S": 0.56
+      },
+      {
+        "condition": "R0",
+        "position": 3,
+        "n": 50,
+        "S": 32,
+        "P": 18,
+        "I": 0,
+        "frequency_S": 0.64
+      },
+      {
+        "condition": "R0",
+        "position": 4,
+        "n": 50,
+        "S": 24,
+        "P": 26,
+        "I": 0,
+        "frequency_S": 0.48
+      },
+      {
+        "condition": "R7",
+        "position": 1,
+        "n": 50,
+        "S": 26,
+        "P": 24,
+        "I": 0,
+        "frequency_S": 0.52
+      },
+      {
+        "condition": "R7",
+        "position": 2,
+        "n": 50,
+        "S": 27,
+        "P": 23,
+        "I": 0,
+        "frequency_S": 0.54
+      },
+      {
+        "condition": "R7",
+        "position": 3,
+        "n": 50,
+        "S": 29,
+        "P": 21,
+        "I": 0,
+        "frequency_S": 0.58
+      },
+      {
+        "condition": "R7",
+        "position": 4,
+        "n": 50,
+        "S": 34,
+        "P": 16,
+        "I": 0,
+        "frequency_S": 0.68
+      },
+      {
+        "condition": "K0",
+        "position": 1,
+        "n": 50,
+        "S": 43,
+        "P": 7,
+        "I": 0,
+        "frequency_S": 0.86
+      },
+      {
+        "condition": "K0",
+        "position": 2,
+        "n": 50,
+        "S": 43,
+        "P": 7,
+        "I": 0,
+        "frequency_S": 0.86
+      },
+      {
+        "condition": "K0",
+        "position": 3,
+        "n": 50,
+        "S": 46,
+        "P": 4,
+        "I": 0,
+        "frequency_S": 0.92
+      },
+      {
+        "condition": "K0",
+        "position": 4,
+        "n": 50,
+        "S": 42,
+        "P": 8,
+        "I": 0,
+        "frequency_S": 0.84
+      },
+      {
+        "condition": "K7",
+        "position": 1,
+        "n": 50,
+        "S": 46,
+        "P": 4,
+        "I": 0,
+        "frequency_S": 0.92
+      },
+      {
+        "condition": "K7",
+        "position": 2,
+        "n": 50,
+        "S": 46,
+        "P": 4,
+        "I": 0,
+        "frequency_S": 0.92
+      },
+      {
+        "condition": "K7",
+        "position": 3,
+        "n": 50,
+        "S": 47,
+        "P": 3,
+        "I": 0,
+        "frequency_S": 0.94
+      },
+      {
+        "condition": "K7",
+        "position": 4,
+        "n": 50,
+        "S": 47,
+        "P": 3,
+        "I": 0,
+        "frequency_S": 0.94
+      }
+    ],
+    "motif_rows": [
+      {
+        "seed": 464,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 465,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 466,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 467,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 468,
+        "motif": "PSSS"
+      },
+      {
+        "seed": 469,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 470,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 471,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 472,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 473,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 474,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 475,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 476,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 477,
+        "motif": "PSSS"
+      },
+      {
+        "seed": 478,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 479,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 480,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 481,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 482,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 483,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 484,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 485,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 486,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 487,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 488,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 489,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 490,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 491,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 492,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 493,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 494,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 495,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 496,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 497,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 498,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 499,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 500,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 501,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 502,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 503,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 504,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 505,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 506,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 507,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 508,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 509,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 510,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 511,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 512,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 513,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 514,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 515,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 516,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 517,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 518,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 519,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 520,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 521,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 522,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 523,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 524,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 525,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 526,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 527,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 528,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 529,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 530,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 531,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 532,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 533,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 534,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 535,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 536,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 537,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 538,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 539,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 540,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 541,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 542,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 543,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 544,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 545,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 546,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 547,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 548,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 549,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 550,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 551,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 552,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 553,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 554,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 555,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 556,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 557,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 558,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 559,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 560,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 561,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 562,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 563,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 564,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 565,
+        "motif": "PSSS"
+      },
+      {
+        "seed": 566,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 567,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 568,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 569,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 570,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 571,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 572,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 573,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 574,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 575,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 576,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 577,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 578,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 579,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 580,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 581,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 582,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 583,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 584,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 585,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 586,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 587,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 588,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 589,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 590,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 591,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 592,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 593,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 594,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 595,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 596,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 597,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 598,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 599,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 600,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 601,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 602,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 603,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 604,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 605,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 606,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 607,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 608,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 609,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 610,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 611,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 612,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 613,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 614,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 615,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 616,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 617,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 618,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 619,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 620,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 621,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 622,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 623,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 624,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 625,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 626,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 627,
+        "motif": "PSSS"
+      },
+      {
+        "seed": 628,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 629,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 630,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 631,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 632,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 633,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 634,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 635,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 636,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 637,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 638,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 639,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 640,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 641,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 642,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 643,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 644,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 645,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 646,
+        "motif": "PSSS"
+      },
+      {
+        "seed": 647,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 648,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 649,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 650,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 651,
+        "motif": "PPPP"
+      },
+      {
+        "seed": 652,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 653,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 654,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 655,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 656,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 657,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 658,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 659,
+        "motif": "PPSS"
+      },
+      {
+        "seed": 660,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 661,
+        "motif": "SSSS"
+      },
+      {
+        "seed": 662,
+        "motif": "PPPS"
+      },
+      {
+        "seed": 663,
+        "motif": "PPPP"
+      }
+    ],
+    "motif_counts": {
+      "SSSS": 111,
+      "PPPS": 12,
+      "PPPP": 14,
+      "PSSS": 5,
+      "PPSS": 58
+    }
+  }
+}
