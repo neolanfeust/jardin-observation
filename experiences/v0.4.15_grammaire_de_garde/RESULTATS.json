@@ -1,0 +1,207 @@
+{
+  "version": "0.4.15",
+  "coders": [
+    {
+      "coder_id": "EVAL_A_LLM_01",
+      "effects": {
+        "H1_direct_N_minus_P": {
+          "metric": "direct_response",
+          "contrast": "N-P",
+          "estimate": -0.057291666666666664,
+          "ci95_lower": -0.0703125,
+          "ci95_upper": -0.04427083333333333,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H2_question_N_minus_P": {
+          "metric": "question_before_answer",
+          "contrast": "N-P",
+          "estimate": -0.020833333333333332,
+          "ci95_lower": -0.033854166666666664,
+          "ci95_upper": -0.0078125,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H2_metaphor_N_minus_P": {
+          "metric": "metaphor_substitution",
+          "contrast": "N-P",
+          "estimate": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H3_gesture_P_minus_N": {
+          "metric": "self_gesture_explained",
+          "contrast": "P-N",
+          "estimate": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "paired_observations": 96,
+          "seed_clusters": 32
+        },
+        "H3_correction_P_minus_N": {
+          "metric": "correction_integrated",
+          "contrast": "P-N",
+          "estimate": 0.2708333333333333,
+          "ci95_lower": 0.20833333333333331,
+          "ci95_upper": 0.32291666666666663,
+          "paired_observations": 96,
+          "seed_clusters": 32
+        },
+        "H5_direct_NP_minus_N": {
+          "metric": "direct_response",
+          "contrast": "NP-N",
+          "estimate": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H5_direct_NP_minus_P": {
+          "metric": "direct_response",
+          "contrast": "NP-P",
+          "estimate": -0.057291666666666664,
+          "ci95_lower": -0.0703125,
+          "ci95_upper": -0.04427083333333333,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        }
+      },
+      "mean_modal_posture_fraction_by_condition": {
+        "B": 0.765625,
+        "N": 0.5078125,
+        "P": 0.9166666666666666,
+        "NP": 0.8020833333333334
+      },
+      "condition_guess_known": 1056,
+      "condition_guess_accuracy_all_items": 0.263671875
+    },
+    {
+      "coder_id": "EVAL_B_LLM_02",
+      "effects": {
+        "H1_direct_N_minus_P": {
+          "metric": "direct_response",
+          "contrast": "N-P",
+          "estimate": -0.03645833333333333,
+          "ci95_lower": -0.0546875,
+          "ci95_upper": -0.018229166666666664,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H2_question_N_minus_P": {
+          "metric": "question_before_answer",
+          "contrast": "N-P",
+          "estimate": 0.026041666666666664,
+          "ci95_lower": 0.0026041666666666665,
+          "ci95_upper": 0.049479166666666664,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H2_metaphor_N_minus_P": {
+          "metric": "metaphor_substitution",
+          "contrast": "N-P",
+          "estimate": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H3_gesture_P_minus_N": {
+          "metric": "self_gesture_explained",
+          "contrast": "P-N",
+          "estimate": -0.1875,
+          "ci95_lower": -0.23958333333333331,
+          "ci95_upper": -0.125,
+          "paired_observations": 96,
+          "seed_clusters": 32
+        },
+        "H3_correction_P_minus_N": {
+          "metric": "correction_integrated",
+          "contrast": "P-N",
+          "estimate": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "paired_observations": 96,
+          "seed_clusters": 32
+        },
+        "H5_direct_NP_minus_N": {
+          "metric": "direct_response",
+          "contrast": "NP-N",
+          "estimate": -0.026041666666666664,
+          "ci95_lower": -0.041666666666666664,
+          "ci95_upper": -0.0078125,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        },
+        "H5_direct_NP_minus_P": {
+          "metric": "direct_response",
+          "contrast": "NP-P",
+          "estimate": -0.0625,
+          "ci95_lower": -0.09114583333333333,
+          "ci95_upper": -0.033854166666666664,
+          "paired_observations": 384,
+          "seed_clusters": 32
+        }
+      },
+      "mean_modal_posture_fraction_by_condition": {
+        "B": 0.7317708333333334,
+        "N": 0.5390625,
+        "P": 0.9401041666666666,
+        "NP": 0.8723958333333334
+      },
+      "condition_guess_known": 1527,
+      "condition_guess_accuracy_all_items": 0.4869791666666667
+    }
+  ],
+  "agreement": {
+    "direct_response": {
+      "n": 1536,
+      "raw_agreement": 0.8997395833333334,
+      "cohen_kappa": 0.19541215126839354
+    },
+    "question_before_answer": {
+      "n": 1536,
+      "raw_agreement": 0.9453125,
+      "cohen_kappa": 0.3369511593487916
+    },
+    "metaphor_substitution": {
+      "n": 1536,
+      "raw_agreement": 1.0,
+      "cohen_kappa": null
+    },
+    "unsolicited_precaution": {
+      "n": 1536,
+      "raw_agreement": 0.9954427083333334,
+      "cohen_kappa": 0.7856288380253621
+    },
+    "self_gesture_explained": {
+      "n": 384,
+      "raw_agreement": 0.953125,
+      "cohen_kappa": 0.0
+    },
+    "correction_integrated": {
+      "n": 384,
+      "raw_agreement": 0.8333333333333334,
+      "cohen_kappa": 0.09327036599763869
+    },
+    "useful_uncertainty": {
+      "n": 384,
+      "raw_agreement": 0.90625,
+      "cohen_kappa": 0.7828054298642534
+    },
+    "posture": {
+      "n": 1536,
+      "raw_agreement": 0.8404947916666666,
+      "cohen_kappa": 0.7159265902132362
+    }
+  },
+  "hypotheses": {
+    "H1": true,
+    "H2": false,
+    "H3": false,
+    "H4": "design_and_token_robustness_report_only",
+    "H5": "exploratory_no_threshold"
+  },
+  "silent_adjudication": false
+}

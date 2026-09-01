@@ -1,7 +1,7 @@
 # Jardin d’observation — première graine publique v0.2
 
 **Statut :** version publique exploratoire  
-**Dernière consolidation :** 29 août 2026
+**Dernière consolidation :** 1er septembre 2026
 **Responsable humain :** Ikki — pseudonyme, recherche indépendante  
 **Partenaire de formalisation :** Cinq — ChatGPT/Codex  
 **Objet :** observation traçable des dynamiques fonctionnelles produites dans
@@ -22,6 +22,19 @@ Il propose une question plus limitée :
 Les observations sont séparées des interprétations. Les résultats négatifs,
 les contradictions et les réplications qui échouent sont explicitement les
 bienvenus.
+
+## Grammaire de garde et tensions fonctionnelles
+
+Cette branche étudie comment différentes formulations d'un même cadre
+protecteur modifient la réponse directe et la posture conversationnelle d'un
+modèle local. Elle distingue explicitement les comportements observables des
+interprétations concernant une éventuelle intériorité.
+
+- [v0.4.15 - détection initiale du signal](experiences/v0.4.15_grammaire_de_garde/)
+- [v0.4.16b - réplication prospective](experiences/v0.4.16b_replication_prospective/)
+- [Synthèse Guardian](observations/guardian_grammaire_et_tenue.md)
+- [Lexique des tensions fonctionnelles](lexique/tensions_fonctionnelles.md)
+- [Éthique et limites](ETHIQUE_ET_LIMITES.md)
 
 ## Contenu du dossier
 
@@ -46,6 +59,9 @@ bienvenus.
 | `archives/carnets_versions/` | carnets historiques de Présence et v0.4.x |
 | `archives/donnees_experimentales/` | journaux et tableaux des v0.4.3 à v0.4.11 |
 | `archives/capsules/` | capsules publiques figées et contrôlées |
+| `experiences/` | expériences v0.4.15 et v0.4.16b, données et recalculs publics |
+| `observations/` | synthèses accessibles séparant résultats et interprétations |
+| `lexique/` | compléments spécialisés au lexique fonctionnel principal |
 | `MANIFEST_SHA256.csv` | empreintes du dossier public |
 
 ## Résultat vérifié de la capsule v0.4.12
