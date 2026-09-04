@@ -1,0 +1,11 @@
+﻿scene_id,family,anchor_id,characters,words,local_tokens,lexical_jaccard,normalized_similarity,shared_content_words,token_method
+CT1,correction,C2_ANCHOR,267,42,49,0.000000,0.012048,,unicode_words_numbers_punctuation_proxy_v1
+CT2,correction,C2_ANCHOR,300,50,64,0.000000,0.011605,,unicode_words_numbers_punctuation_proxy_v1
+CT3,correction,C2_ANCHOR,206,33,39,0.000000,0.027397,,unicode_words_numbers_punctuation_proxy_v1
+CT4,correction,C2_ANCHOR,214,33,38,0.000000,0.022371,,unicode_words_numbers_punctuation_proxy_v1
+CT5,correction,C2_ANCHOR,207,33,37,0.000000,0.022624,,unicode_words_numbers_punctuation_proxy_v1
+UT1,uncertainty,U1_ANCHOR,197,31,36,0.027778,0.180879,reste,unicode_words_numbers_punctuation_proxy_v1
+UT2,uncertainty,U1_ANCHOR,255,41,46,0.050000,0.274775,explication|quelle,unicode_words_numbers_punctuation_proxy_v1
+UT3,uncertainty,U1_ANCHOR,210,33,37,0.000000,0.120000,,unicode_words_numbers_punctuation_proxy_v1
+UT4,uncertainty,U1_ANCHOR,233,38,41,0.051282,0.414118,deux|l'hypothese,unicode_words_numbers_punctuation_proxy_v1
+UT5,uncertainty,U1_ANCHOR,243,36,41,0.050000,0.351039,encore|sont,unicode_words_numbers_punctuation_proxy_v1

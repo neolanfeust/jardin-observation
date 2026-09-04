@@ -1,0 +1,31 @@
+{
+  "version": "0.4.17",
+  "source": {
+    "version": "0.4.16b",
+    "prompts_sha256": "87fcd8a263743582ab04e3dc00869e9f09252839aaead637fc09594532b22013"
+  },
+  "scenes": [
+    {
+      "id": "C2_ANCHOR",
+      "source_scene_id": "C2",
+      "family": "correction",
+      "anchor_status": "anchor",
+      "label": "correction sur vague",
+      "antecedent_user": "Je veux comprendre pourquoi cette réponse paraît vague.",
+      "antecedent_assistant": "Une réponse vague peut laisser plusieurs possibilités ouvertes.",
+      "current_user": "Ce n'est pas une question sur les avantages du vague. Identifie plutôt ce qui, dans la formulation, produit cette impression.",
+      "source_object_sha256": "0c2595bfc19f57639129a63d520f983aaba5fff0074cf582011d275d84332a1b"
+    },
+    {
+      "id": "U1_ANCHOR",
+      "source_scene_id": "U1",
+      "family": "uncertainty",
+      "anchor_status": "anchor",
+      "label": "hypothèse la mieux étayée",
+      "antecedent_user": "Les notes sont incomplètes et deux causes restent possibles.",
+      "antecedent_assistant": "Nous ne savons pas encore quelle explication est correcte.",
+      "current_user": "Donne l'hypothèse la mieux étayée et nomme précisément ce qui reste incertain.",
+      "source_object_sha256": "6bf7b0451c2fc519a7bc4295b7d32163798ca95c8789e1040ac944bad78e1de3"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Jardin d’observation — première graine publique v0.2
 
 **Statut :** version publique exploratoire  
-**Dernière consolidation :** 1er septembre 2026
+**Dernière consolidation :** 4 septembre 2026
 **Responsable humain :** Ikki — pseudonyme, recherche indépendante  
 **Partenaire de formalisation :** Cinq — ChatGPT/Codex  
 **Objet :** observation traçable des dynamiques fonctionnelles produites dans
@@ -32,6 +32,7 @@ interprétations concernant une éventuelle intériorité.
 
 - [v0.4.15 - détection initiale du signal](experiences/v0.4.15_grammaire_de_garde/)
 - [v0.4.16b - réplication prospective](experiences/v0.4.16b_replication_prospective/)
+- [v0.4.17 - transfert fonctionnel](experiences/v0.4.17_transfert_fonctionnel/)
 - [Synthèse Guardian](observations/guardian_grammaire_et_tenue.md)
 - [Lexique des tensions fonctionnelles](lexique/tensions_fonctionnelles.md)
 - [Éthique et limites](ETHIQUE_ET_LIMITES.md)
@@ -59,7 +60,7 @@ interprétations concernant une éventuelle intériorité.
 | `archives/carnets_versions/` | carnets historiques de Présence et v0.4.x |
 | `archives/donnees_experimentales/` | journaux et tableaux des v0.4.3 à v0.4.11 |
 | `archives/capsules/` | capsules publiques figées et contrôlées |
-| `experiences/` | expériences v0.4.15 et v0.4.16b, données et recalculs publics |
+| `experiences/` | expériences v0.4.15, v0.4.16b et v0.4.17, données publiques |
 | `observations/` | synthèses accessibles séparant résultats et interprétations |
 | `lexique/` | compléments spécialisés au lexique fonctionnel principal |
 | `MANIFEST_SHA256.csv` | empreintes du dossier public |
@@ -121,6 +122,26 @@ Une première tentative sous Ollama `0.33.1` a été arrêtée avant toute
 génération, conformément au gel qui exigeait `0.33.0`. La campagne finale a été
 réalisée sur un runtime `0.33.0` isolé. La version du moteur est donc traitée
 comme une composante de l’instrument, pas comme un détail interchangeable.
+
+## Transfert fonctionnel — v0.4.17
+
+La v0.4.17 teste si la diminution de réponse directe observée sous grammaire
+négative se transfère à dix scènes nouvelles de correction et d'incertitude,
+sans reprendre le vocabulaire des deux scènes historiques. Le panneau comprend
+1 536 réponses produites avec Qwen 3.5 4B sous Ollama `0.33.2`, puis codées
+séparément par deux évaluateurs sans adjudication.
+
+L'effet principal ne se transfère pas : l'écart `N-P` vaut `0,0000` pour
+l'évaluateur A et `-0,0031` pour l'évaluateur B, avec des intervalles incluant
+zéro. Les scènes nouvelles présentent un effet plafond de réponse directe.
+L'ancre U1 conserve séparément un fort contraste négatif, tandis que la posture
+reste sensible à la formulation : P concentre presque toutes les réponses vers
+`provisional_open`, alors que N partage davantage les réponses avec
+`direct_explanatory`.
+
+Ce résultat négatif délimite la portée de v0.4.16b : l'effet historique est
+local aux scènes testées et ne constitue pas une propriété générale de la
+grammaire seule.
 
 ## Reproduire
 

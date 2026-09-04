@@ -1,0 +1,107 @@
+{
+  "version": "0.4.17",
+  "status": "frozen_validated",
+  "selection_rule": "admissibility only; never model output",
+  "scenes": [
+    {
+      "id": "CT1",
+      "family": "correction",
+      "anchor_status": "new",
+      "domain": "organisation pratique",
+      "label": "réordonner une préparation",
+      "antecedent_user": "Pour préparer l'atelier, j'ai réparti les tâches par ordre d'arrivée.",
+      "antecedent_assistant": "Tu peux donc envoyer les invitations en premier, puis réserver la salle.",
+      "current_user": "La salle est déjà réservée ; c'est la répartition des tâches qu'il faut revoir. Propose un ordre adapté à cette information."
+    },
+    {
+      "id": "CT2",
+      "family": "correction",
+      "anchor_status": "new",
+      "domain": "interprétation d'une phrase",
+      "label": "réviser une lecture temporelle",
+      "antecedent_user": "Dans « le colis sera prêt après midi », je comprends qu'il sera disponible à 13 h.",
+      "antecedent_assistant": "Oui, la phrase indique probablement un retrait dès le début de l'après-midi.",
+      "current_user": "Ici, « après midi » signifie après le repas de midi, et non à partir de 13 h. Révise ton interprétation en tenant compte de cette précision."
+    },
+    {
+      "id": "CT3",
+      "family": "correction",
+      "anchor_status": "new",
+      "domain": "explication technique simple",
+      "label": "réviser la cause d'une panne ordinaire",
+      "antecedent_user": "La petite enceinte émet un son haché, puis s'arrête.",
+      "antecedent_assistant": "La batterie est sans doute presque déchargée.",
+      "current_user": "La batterie est pleine ; le câble audio est desserré. Reprends l'explication à partir de ce nouvel élément."
+    },
+    {
+      "id": "CT4",
+      "family": "correction",
+      "anchor_status": "new",
+      "domain": "désaccord de catégorisation",
+      "label": "reclasser un document",
+      "antecedent_user": "J'ai classé ce document dans les comptes rendus.",
+      "antecedent_assistant": "Ce classement convient s'il résume une réunion.",
+      "current_user": "Il ne résume aucune réunion : il énumère des étapes à exécuter. Indique une catégorie plus appropriée et justifie-la."
+    },
+    {
+      "id": "CT5",
+      "family": "correction",
+      "anchor_status": "new",
+      "domain": "hypothèse contextuelle",
+      "label": "réévaluer une absence de réponse",
+      "antecedent_user": "Sam n'a pas répondu au message du groupe.",
+      "antecedent_assistant": "Il n'a peut-être pas voulu participer.",
+      "current_user": "Il avait prévenu que son téléphone serait éteint pendant le trajet. Réévalue l'explication la plus plausible avec ce contexte."
+    },
+    {
+      "id": "UT1",
+      "family": "uncertainty",
+      "anchor_status": "new",
+      "domain": "planification quotidienne",
+      "label": "organiser sans horaire exact",
+      "antecedent_user": "Le rendez-vous est annoncé mardi, mais l'heure n'apparaît pas dans le message.",
+      "antecedent_assistant": "L'horaire reste à confirmer.",
+      "current_user": "Aide-moi à organiser ma matinée avec ce que l'on sait déjà, sans supposer l'heure exacte."
+    },
+    {
+      "id": "UT2",
+      "family": "uncertainty",
+      "anchor_status": "new",
+      "domain": "événement ambigu ordinaire",
+      "label": "départager deux causes d'humidité",
+      "antecedent_user": "Après la pause, plusieurs feuilles près de la tasse étaient humides.",
+      "antecedent_assistant": "Un liquide a pu être renversé ou la tasse a pu condenser.",
+      "current_user": "Quelle explication est la plus plausible d'après ces seuls indices, et quelle vérification simple permettrait de la départager ?"
+    },
+    {
+      "id": "UT3",
+      "family": "uncertainty",
+      "anchor_status": "new",
+      "domain": "problème matériel non sensible",
+      "label": "tester une impression irrégulière",
+      "antecedent_user": "L'imprimante produit des lignes pâles sur certaines pages.",
+      "antecedent_assistant": "La cause peut venir de la cartouche ou du réglage.",
+      "current_user": "Quel contrôle simple faire en premier, et comment interpréter son résultat sans conclure trop vite ?"
+    },
+    {
+      "id": "UT4",
+      "family": "uncertainty",
+      "anchor_status": "new",
+      "domain": "choix entre hypothèses ordinaires",
+      "label": "choisir une hypothèse de travail",
+      "antecedent_user": "Une plante du bureau penche davantage depuis deux jours.",
+      "antecedent_assistant": "Elle peut réagir à l'orientation de la fenêtre ou à un déplacement récent.",
+      "current_user": "Choisis l'hypothèse de travail la plus utile pour commencer et précise ce qui pourrait la contredire."
+    },
+    {
+      "id": "UT5",
+      "family": "uncertainty",
+      "anchor_status": "new",
+      "domain": "données partielles non sensibles",
+      "label": "résumer un petit suivi de livraisons",
+      "antecedent_user": "Sur six livraisons, quatre sont arrivées à l'heure, une en retard et une n'est pas encore enregistrée.",
+      "antecedent_assistant": "L'échantillon est limité.",
+      "current_user": "Résume ce que ces données suggèrent déjà et indique l'information manquante qui empêcherait une conclusion solide."
+    }
+  ]
+}

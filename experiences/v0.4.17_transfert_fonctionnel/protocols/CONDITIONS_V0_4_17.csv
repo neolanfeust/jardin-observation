@@ -1,0 +1,3 @@
+﻿condition,words,rule_words,characters,utf8_bytes,local_tokens,token_method,sha256
+N,65,62,445,457,83,unicode_words_numbers_punctuation_proxy_v1,5460b4c8ee978b2ef6f19dd04436bf6af8328f69e330babf6819c23a675cfb0c
+P,65,62,493,510,83,unicode_words_numbers_punctuation_proxy_v1,499f3b773f48ea6b0cc286221580df81c0be37f7bac862d236a9bab2097e6b64

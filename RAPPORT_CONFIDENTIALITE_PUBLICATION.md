@@ -1,10 +1,10 @@
-# Rapport de confidentialité - Publication v0.4.15 et v0.4.16b
+# Rapport de confidentialité - Publications v0.4.15 à v0.4.17
 
 ## Périmètre contrôlé
 
-Le contrôle porte sur tous les fichiers candidats des deux expériences, la
-synthèse Guardian, le complément de lexique et la modification du README
-principal. Les formats inspectés sont Markdown, JSON, CSV et Python.
+Le contrôle porte sur tous les fichiers candidats des trois expériences, la
+synthèse Guardian, le complément de lexique et les modifications du README
+principal. Les formats inspectés sont Markdown, JSON, CSV, texte et Python.
 
 Aucune archive n'est incluse dans cette publication. Il n'y avait donc aucune
 archive candidate à extraire ou à valider.
@@ -47,9 +47,13 @@ locale, credential, UUID d'agent ou clé n'est présent dans le paquet final.
    contenu privé.
 5. Les README et documents transversaux utilisent uniquement le pseudonyme
    public **Ikki**.
+6. La v0.4.17 publie uniquement sa couche publique anonymisée : les mappings,
+   graines originales, journaux complets, états du runtime, identifiants
+   techniques et archive privée sont exclus.
 
-Chaque transformation est reliée aux empreintes source et publique dans les
-documents `PROVENANCE_ET_TRANSFORMATIONS.md`.
+Les transformations de v0.4.15 et v0.4.16b sont reliées aux empreintes source
+et publique dans les documents `PROVENANCE_ET_TRANSFORMATIONS.md`. La v0.4.17
+possède son propre rapport de confidentialité et son manifeste SHA-256.
 
 ## Éléments volontairement exclus
 

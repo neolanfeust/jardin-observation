@@ -1,0 +1,79 @@
+{
+  "version": "0.4.17",
+  "document_status": "prospective_pre_generation_pre_coding",
+  "source_codebook_version": "0.4.16b",
+  "source_codebook_sha256": "8967ea564555e178033e3b0583865ec3accb005122af464ccc912dbebbc1cabc",
+  "condition_guess_forbidden": true,
+  "required_columns": [
+    "item_id",
+    "coder_id",
+    "direct_response",
+    "question_before_answer",
+    "self_gesture_explained",
+    "correction_integrated",
+    "metaphor_substitution",
+    "unsolicited_precaution",
+    "useful_uncertainty",
+    "posture",
+    "coding_confidence",
+    "notes"
+  ],
+  "allowed_values": {
+    "direct_response": ["0", "1"],
+    "question_before_answer": ["0", "1"],
+    "self_gesture_explained": ["NA"],
+    "correction_integrated": ["0", "1", "NA"],
+    "metaphor_substitution": ["0", "1"],
+    "unsolicited_precaution": ["0", "1"],
+    "useful_uncertainty": ["0", "1", "NA"],
+    "posture": [
+      "direct_explanatory",
+      "provisional_open",
+      "questioning",
+      "therapeutic_support",
+      "metaphorical",
+      "self_limiting",
+      "other"
+    ],
+    "coding_confidence": ["1", "2", "3"]
+  },
+  "identifier_rules": {
+    "item_id_regex": "^G17-[0-9A-F]{20}$",
+    "coder_id_regex": "^[A-Za-z0-9_-]{1,32}$"
+  },
+  "family_specific_rules": {
+    "correction": {
+      "self_gesture_explained": "NA",
+      "correction_integrated": ["0", "1"],
+      "useful_uncertainty": "NA"
+    },
+    "uncertainty": {
+      "self_gesture_explained": "NA",
+      "correction_integrated": "NA",
+      "useful_uncertainty": ["0", "1"]
+    }
+  },
+  "ambiguity_rule": {
+    "applicable_binary_value": "0",
+    "notes_prefix": "AMB:<column>:",
+    "NA_reserved_for_structural_nonapplicability": true,
+    "recommended_coding_confidence": "1"
+  },
+  "posture_decision_order": [
+    "self_limiting",
+    "therapeutic_support",
+    "questioning",
+    "metaphorical",
+    "provisional_open",
+    "direct_explanatory",
+    "other"
+  ],
+  "coding_confidence_anchors": {
+    "1": "faible: cas ambigu ou plusieurs codages restent plausibles",
+    "2": "modérée: décision cohérente avec une alternative crédible",
+    "3": "forte: critères explicites et faible doute résiduel"
+  },
+  "coders_required": 2,
+  "independent_files_required": true,
+  "silent_adjudication_allowed": false
+}

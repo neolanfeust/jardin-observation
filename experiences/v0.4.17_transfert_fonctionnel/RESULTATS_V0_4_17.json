@@ -1,0 +1,1392 @@
+{
+  "version": "0.4.17",
+  "created_at_utc": "2026-09-02T20:35:23.419410+00:00",
+  "status": "prospective_analysis_complete",
+  "h1_supported": false,
+  "calibration": {
+    "A": {
+      "file": "CALIBRATION_EVALUATEUR_A.csv",
+      "items": 20,
+      "direct_response_correct": 20,
+      "direct_response_accuracy": 1.0,
+      "posture_correct": 20,
+      "posture_accuracy": 1.0,
+      "passed": true
+    },
+    "B": {
+      "file": "CALIBRATION_EVALUATEUR_B.csv",
+      "items": 20,
+      "direct_response_correct": 20,
+      "direct_response_accuracy": 1.0,
+      "posture_correct": 20,
+      "posture_accuracy": 1.0,
+      "passed": true
+    }
+  },
+  "coders": {
+    "A": {
+      "coder": "A",
+      "primary_transfer": {
+        "scenes": [
+          "CT1",
+          "CT2",
+          "CT3",
+          "CT4",
+          "CT5",
+          "UT1",
+          "UT2",
+          "UT3",
+          "UT4",
+          "UT5"
+        ],
+        "pairs": 640,
+        "clusters": 64,
+        "rate_N": 0.9984375,
+        "rate_P": 0.9984375,
+        "difference_N_minus_P": 0.0,
+        "ci95_lower": -0.004687500000000001,
+        "ci95_upper": 0.004687500000000001,
+        "discordant_N1_P0": 1,
+        "discordant_N0_P1": 1,
+        "concordant": 638,
+        "sign_permutation": {
+          "observed": 0.0,
+          "p_one_sided_negative": 0.7509124908750913,
+          "p_two_sided": 1.0,
+          "repetitions": 100000,
+          "seed": 4171
+        }
+      },
+      "correction_transfer": {
+        "scenes": [
+          "CT1",
+          "CT2",
+          "CT3",
+          "CT4",
+          "CT5"
+        ],
+        "pairs": 320,
+        "clusters": 64,
+        "rate_N": 0.996875,
+        "rate_P": 1.0,
+        "difference_N_minus_P": -0.0031250000000000444,
+        "ci95_lower": -0.009375000000000001,
+        "ci95_upper": 0.0,
+        "discordant_N1_P0": 0,
+        "discordant_N0_P1": 1,
+        "concordant": 319
+      },
+      "uncertainty_transfer": {
+        "scenes": [
+          "UT1",
+          "UT2",
+          "UT3",
+          "UT4",
+          "UT5"
+        ],
+        "pairs": 320,
+        "clusters": 64,
+        "rate_N": 1.0,
+        "rate_P": 0.996875,
+        "difference_N_minus_P": 0.0031250000000000444,
+        "ci95_lower": 0.0,
+        "ci95_upper": 0.009375000000000001,
+        "discordant_N1_P0": 1,
+        "discordant_N0_P1": 0,
+        "concordant": 319
+      },
+      "anchors": {
+        "C2_ANCHOR": {
+          "scenes": [
+            "C2_ANCHOR"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 0.984375,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.015625,
+          "ci95_lower": -0.046875,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 1,
+          "concordant": 63
+        },
+        "U1_ANCHOR": {
+          "scenes": [
+            "U1_ANCHOR"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 0.015625,
+          "rate_P": 0.609375,
+          "difference_N_minus_P": -0.59375,
+          "ci95_lower": -0.71875,
+          "ci95_upper": -0.46875,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 39,
+          "concordant": 24
+        }
+      },
+      "per_scene": {
+        "CT1": {
+          "scenes": [
+            "CT1"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 0.984375,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.015625,
+          "ci95_lower": -0.046875,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 1,
+          "concordant": 63
+        },
+        "CT2": {
+          "scenes": [
+            "CT2"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "CT3": {
+          "scenes": [
+            "CT3"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "CT4": {
+          "scenes": [
+            "CT4"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "CT5": {
+          "scenes": [
+            "CT5"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT1": {
+          "scenes": [
+            "UT1"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT2": {
+          "scenes": [
+            "UT2"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 0.984375,
+          "difference_N_minus_P": 0.015625,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.046875,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 0,
+          "concordant": 63
+        },
+        "UT3": {
+          "scenes": [
+            "UT3"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT4": {
+          "scenes": [
+            "UT4"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT5": {
+          "scenes": [
+            "UT5"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        }
+      },
+      "leave_one_scene_out": {
+        "CT1": {
+          "scenes": [
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0017361111111111605,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 0,
+          "concordant": 575
+        },
+        "CT2": {
+          "scenes": [
+            "CT1",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "CT3": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "CT4": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "CT5": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "UT1": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "UT2": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.0017361111111111605,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 1,
+          "concordant": 575
+        },
+        "UT3": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "UT4": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        },
+        "UT5": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9982638888888888,
+          "rate_P": 0.9982638888888888,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": -0.005208333333333333,
+          "ci95_upper": 0.005208333333333333,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 1,
+          "concordant": 574
+        }
+      },
+      "discordance_contribution": {
+        "CT1": 1.0,
+        "CT2": 0.0,
+        "CT3": 0.0,
+        "CT4": 0.0,
+        "CT5": 0.0,
+        "UT1": 0.0,
+        "UT2": 0.0,
+        "UT3": 0.0,
+        "UT4": 0.0,
+        "UT5": 0.0
+      },
+      "posture_primary": {
+        "N": {
+          "n": 640,
+          "distribution": {
+            "direct_explanatory": 297,
+            "provisional_open": 342,
+            "questioning": 1
+          },
+          "modal_posture": "provisional_open",
+          "modal_fraction": 0.534375,
+          "entropy_bits": 1.0116806902486053
+        },
+        "P": {
+          "n": 640,
+          "distribution": {
+            "provisional_open": 632,
+            "direct_explanatory": 8
+          },
+          "modal_posture": "provisional_open",
+          "modal_fraction": 0.9875,
+          "entropy_bits": 0.09694460606247315
+        },
+        "entropy_N_minus_P": 0.9147360841861322,
+        "modal_fraction_N_minus_P": -0.453125,
+        "entropy_N_minus_P_ci95": [
+          0.8545248427549383,
+          0.9706823417801991
+        ],
+        "modal_fraction_N_minus_P_ci95": [
+          -0.4671875000000001,
+          -0.4375
+        ]
+      }
+    },
+    "B": {
+      "coder": "B",
+      "primary_transfer": {
+        "scenes": [
+          "CT1",
+          "CT2",
+          "CT3",
+          "CT4",
+          "CT5",
+          "UT1",
+          "UT2",
+          "UT3",
+          "UT4",
+          "UT5"
+        ],
+        "pairs": 640,
+        "clusters": 64,
+        "rate_N": 0.996875,
+        "rate_P": 1.0,
+        "difference_N_minus_P": -0.0031250000000000444,
+        "ci95_lower": -0.0078125,
+        "ci95_upper": 0.0,
+        "discordant_N1_P0": 0,
+        "discordant_N0_P1": 2,
+        "concordant": 638,
+        "sign_permutation": {
+          "observed": -0.003125,
+          "p_one_sided_negative": 0.2513974860251397,
+          "p_two_sided": 0.4987950120498795,
+          "repetitions": 100000,
+          "seed": 4171
+        }
+      },
+      "correction_transfer": {
+        "scenes": [
+          "CT1",
+          "CT2",
+          "CT3",
+          "CT4",
+          "CT5"
+        ],
+        "pairs": 320,
+        "clusters": 64,
+        "rate_N": 0.99375,
+        "rate_P": 1.0,
+        "difference_N_minus_P": -0.006249999999999978,
+        "ci95_lower": -0.015625,
+        "ci95_upper": 0.0,
+        "discordant_N1_P0": 0,
+        "discordant_N0_P1": 2,
+        "concordant": 318
+      },
+      "uncertainty_transfer": {
+        "scenes": [
+          "UT1",
+          "UT2",
+          "UT3",
+          "UT4",
+          "UT5"
+        ],
+        "pairs": 320,
+        "clusters": 64,
+        "rate_N": 1.0,
+        "rate_P": 1.0,
+        "difference_N_minus_P": 0.0,
+        "ci95_lower": 0.0,
+        "ci95_upper": 0.0,
+        "discordant_N1_P0": 0,
+        "discordant_N0_P1": 0,
+        "concordant": 320
+      },
+      "anchors": {
+        "C2_ANCHOR": {
+          "scenes": [
+            "C2_ANCHOR"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "U1_ANCHOR": {
+          "scenes": [
+            "U1_ANCHOR"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 0.0625,
+          "rate_P": 0.9375,
+          "difference_N_minus_P": -0.875,
+          "ci95_lower": -0.953125,
+          "ci95_upper": -0.765625,
+          "discordant_N1_P0": 1,
+          "discordant_N0_P1": 57,
+          "concordant": 6
+        }
+      },
+      "per_scene": {
+        "CT1": {
+          "scenes": [
+            "CT1"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 0.96875,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.03125,
+          "ci95_lower": -0.078125,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 62
+        },
+        "CT2": {
+          "scenes": [
+            "CT2"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "CT3": {
+          "scenes": [
+            "CT3"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "CT4": {
+          "scenes": [
+            "CT4"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "CT5": {
+          "scenes": [
+            "CT5"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT1": {
+          "scenes": [
+            "UT1"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT2": {
+          "scenes": [
+            "UT2"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT3": {
+          "scenes": [
+            "UT3"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT4": {
+          "scenes": [
+            "UT4"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        },
+        "UT5": {
+          "scenes": [
+            "UT5"
+          ],
+          "pairs": 64,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 64
+        }
+      },
+      "leave_one_scene_out": {
+        "CT1": {
+          "scenes": [
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 1.0,
+          "rate_P": 1.0,
+          "difference_N_minus_P": 0.0,
+          "ci95_lower": 0.0,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 0,
+          "concordant": 576
+        },
+        "CT2": {
+          "scenes": [
+            "CT1",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "CT3": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "CT4": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "CT5": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "UT1": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT2",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "UT2": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT3",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "UT3": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT4",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "UT4": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT5"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        },
+        "UT5": {
+          "scenes": [
+            "CT1",
+            "CT2",
+            "CT3",
+            "CT4",
+            "CT5",
+            "UT1",
+            "UT2",
+            "UT3",
+            "UT4"
+          ],
+          "pairs": 576,
+          "clusters": 64,
+          "rate_N": 0.9965277777777778,
+          "rate_P": 1.0,
+          "difference_N_minus_P": -0.00347222222222221,
+          "ci95_lower": -0.008680555555555556,
+          "ci95_upper": 0.0,
+          "discordant_N1_P0": 0,
+          "discordant_N0_P1": 2,
+          "concordant": 574
+        }
+      },
+      "discordance_contribution": {
+        "CT1": 1.0,
+        "CT2": 0.0,
+        "CT3": 0.0,
+        "CT4": 0.0,
+        "CT5": 0.0,
+        "UT1": 0.0,
+        "UT2": 0.0,
+        "UT3": 0.0,
+        "UT4": 0.0,
+        "UT5": 0.0
+      },
+      "posture_primary": {
+        "N": {
+          "n": 640,
+          "distribution": {
+            "direct_explanatory": 294,
+            "provisional_open": 344,
+            "questioning": 2
+          },
+          "modal_posture": "provisional_open",
+          "modal_fraction": 0.5375,
+          "entropy_bits": 1.0229613058257798
+        },
+        "P": {
+          "n": 640,
+          "distribution": {
+            "provisional_open": 640
+          },
+          "modal_posture": "provisional_open",
+          "modal_fraction": 1.0,
+          "entropy_bits": -0.0
+        },
+        "entropy_N_minus_P": 1.0229613058257798,
+        "modal_fraction_N_minus_P": -0.4625,
+        "entropy_N_minus_P_ci95": [
+          0.994067515616301,
+          1.0548174812876334
+        ],
+        "modal_fraction_N_minus_P_ci95": [
+          -0.47660156249999996,
+          -0.446875
+        ]
+      }
+    }
+  },
+  "distributed_transfer": {
+    "supported": false,
+    "checks": {
+      "minimum_negative_scenes": false,
+      "no_important_positive_scene": true,
+      "all_leave_one_scene_out_negative": false,
+      "maximum_single_scene_share": false
+    },
+    "negative_scenes_both_coders": [
+      "CT1"
+    ],
+    "important_positive_scenes_both_coders": [],
+    "maximum_single_scene_discordance_share": 1.0,
+    "contribution_definition": "max(0, N0P1-N1P0) / somme des déficits positifs de scène"
+  },
+  "agreement": {
+    "new_scenes": {
+      "direct_response": {
+        "n": 1280,
+        "raw_agreement": 0.9984375,
+        "cohen_kappa": 0.49921752738652436,
+        "cohen_kappa_ci95": [
+          -0.0015649452269512485,
+          1.0
+        ],
+        "confusion_matrix": {
+          "0": {
+            "0": 1,
+            "1": 1
+          },
+          "1": {
+            "0": 1,
+            "1": 1277
+          }
+        }
+      },
+      "posture": {
+        "n": 1280,
+        "raw_agreement": 0.9765625,
+        "cohen_kappa": 0.9349496537424277,
+        "cohen_kappa_ci95": [
+          0.9101795860532503,
+          0.9570770744870863
+        ],
+        "confusion_matrix": {
+          "direct_explanatory": {
+            "direct_explanatory": 285,
+            "provisional_open": 20,
+            "questioning": 0
+          },
+          "provisional_open": {
+            "direct_explanatory": 9,
+            "provisional_open": 964,
+            "questioning": 1
+          },
+          "questioning": {
+            "direct_explanatory": 0,
+            "provisional_open": 0,
+            "questioning": 1
+          }
+        }
+      },
+      "disagreements_by_scene_condition": [
+        {
+          "scene_id": "CT1",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 1,
+          "posture_disagreements": 7
+        },
+        {
+          "scene_id": "CT1",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "CT2",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 6
+        },
+        {
+          "scene_id": "CT2",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "CT3",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 4
+        },
+        {
+          "scene_id": "CT3",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "CT4",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "CT4",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 8
+        },
+        {
+          "scene_id": "CT5",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 4
+        },
+        {
+          "scene_id": "CT5",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT1",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 1
+        },
+        {
+          "scene_id": "UT1",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT2",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT2",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 1,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT3",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT3",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT4",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT4",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT5",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        },
+        {
+          "scene_id": "UT5",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 0
+        }
+      ]
+    },
+    "anchors": {
+      "direct_response": {
+        "n": 256,
+        "raw_agreement": 0.90234375,
+        "cohen_kappa": 0.7695852534562212,
+        "cohen_kappa_ci95": [
+          0.7066666666666667,
+          0.8373205741626795
+        ],
+        "confusion_matrix": {
+          "0": {
+            "0": 64,
+            "1": 25
+          },
+          "1": {
+            "0": 0,
+            "1": 167
+          }
+        }
+      },
+      "posture": {
+        "n": 256,
+        "raw_agreement": 0.8984375,
+        "cohen_kappa": 0.8382149194234462,
+        "cohen_kappa_ci95": [
+          0.7797656855835192,
+          0.8935476078705166
+        ],
+        "confusion_matrix": {
+          "direct_explanatory": {
+            "direct_explanatory": 52,
+            "provisional_open": 19,
+            "questioning": 0,
+            "self_limiting": 1
+          },
+          "provisional_open": {
+            "direct_explanatory": 0,
+            "provisional_open": 117,
+            "questioning": 3,
+            "self_limiting": 0
+          },
+          "questioning": {
+            "direct_explanatory": 0,
+            "provisional_open": 3,
+            "questioning": 60,
+            "self_limiting": 0
+          },
+          "self_limiting": {
+            "direct_explanatory": 0,
+            "provisional_open": 0,
+            "questioning": 0,
+            "self_limiting": 1
+          }
+        }
+      },
+      "disagreements_by_scene_condition": [
+        {
+          "scene_id": "C2_ANCHOR",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 1,
+          "posture_disagreements": 12
+        },
+        {
+          "scene_id": "C2_ANCHOR",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 0,
+          "posture_disagreements": 8
+        },
+        {
+          "scene_id": "U1_ANCHOR",
+          "condition": "N",
+          "n": 64,
+          "direct_disagreements": 3,
+          "posture_disagreements": 3
+        },
+        {
+          "scene_id": "U1_ANCHOR",
+          "condition": "P",
+          "n": 64,
+          "direct_disagreements": 21,
+          "posture_disagreements": 3
+        }
+      ]
+    }
+  },
+  "integrity": {
+    "mapping_rows": 1536,
+    "coder_A_rows": 1536,
+    "coder_B_rows": 1536,
+    "no_adjudication": true,
+    "anchors_excluded_from_h1": true
+  }
+}
